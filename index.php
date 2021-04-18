@@ -11,7 +11,6 @@
     echo date('Y-m-d');
     $a = 10;
     echo $a;
-    //pongo otro comentario
  ?>
 
     
