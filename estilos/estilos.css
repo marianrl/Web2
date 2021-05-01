@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
 
+body {
+    background-image: url(../imagenes/fondo.jpeg);
+    background-repeat: repeat-x repeat-y;
+}
 
 .navbar {
     background-color: #90CAF9 !important;
@@ -208,5 +212,5 @@ h2 {
     margin-bottom: 20px;
 }
 
-}
+
   

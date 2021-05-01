@@ -1,15 +1,13 @@
 <!doctype html>
 <html lang="es">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../estilos/estilos.css">
+require_once("../part/head.php");
+?>
 
+</head>
+   
     <title>Contacto</title>
    <header id="_top">
 
@@ -18,23 +16,23 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="../index.html">
+            <a class="navbar-brand" href="../index.php">
                 <img src="../imagenes/logo.png" width="102" height="100" alt="Logo teckel's">
             </a>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../paginas/quienessomos.html"><img class="icono" src="../imagenes/documento.png" alt="quienessomos">¿Quiénes somos?</a>
+                        <a class="nav-link" href="../paginas/quienessomos.php"><img class="icono" src="../imagenes/documento.png" alt="quienessomos">¿Quiénes somos?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../paginas/tienda.html"><img class="icono" src="../imagenes/carro.png" alt="tienda">Tienda</a>
+                        <a class="nav-link" href="../paginas/tienda.php"><img class="icono" src="../imagenes/carro.png" alt="tienda">Tienda</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="../paginas/contacto.html"><img class="icono" src="../imagenes/carta.png" alt="contacto">Contacto</a>
+                        <a class="nav-link" href="../paginas/contacto.php"><img class="icono" src="../imagenes/carta.png" alt="contacto">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../paginas/faqs.html"><img class="icono" src="../imagenes/ayudar.png" alt="Preguntas frecuentes">Faq's</a>
+                        <a class="nav-link" href="../paginas/faqs.php"><img class="icono" src="../imagenes/ayudar.png" alt="Preguntas frecuentes">Faq's</a>
                     </li>
                 
                 </ul>
@@ -56,7 +54,7 @@
     
 <aside class="container-fluid col-lg-12 col-md-12 col-sm-6 col-8 aside">
     <h2 class="container-fluid">Dejanos tu consulta</h2>
-       <p class="p2 container-fluid"><span class="block">Pero antes…</span> <span>¿Has leído nuestras <a class="oblique" href="faqs.html">preguntas frecuentes? </a></span> <span> Quizá contengan la información que buscas, </span><span class="oblique">¡y así te ahorrararías tiempo, y a Teckel's recursos!</span></p>
+       <p class="p2 container-fluid"><span class="block">Pero antes…</span> <span>¿Has leído nuestras <a class="oblique" href="faqs.php">preguntas frecuentes? </a></span> <span> Quizá contengan la información que buscas, </span><span class="oblique">¡y así te ahorrararías tiempo, y a Teckel's recursos!</span></p>
        </aside>
        
 <div class="col-lg-12 col-md-12 col-sm-12 col-12 conteiner for">
