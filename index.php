@@ -8,11 +8,11 @@ require_once("part/head.php");
 
 <body>
 
-<?php
+    <?php
 
-require_once("part/header.php");
+        require_once("part/header_index.php");
 
-?>
+    ?>
     <main>
         <section>
             <h1>Teckel's Bakery</h1>

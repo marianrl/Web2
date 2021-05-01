@@ -127,7 +127,6 @@ h2 {
     background-color: #FF7043;
     color: black;
     text-align: center;
-    border-radius: 5px;
     padding: 5px 15px;
     font-size: 1.50em;
     font-family: 'Roboto Black', sans-serif;
@@ -212,5 +211,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-
+.card {
+    margin-bottom: 20px;
+}
   
