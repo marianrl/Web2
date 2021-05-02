@@ -5,5 +5,7 @@ $marca = array(
                 'id' => 1,
                 'marca' => "Teckel's Bakery"
         )
-)
+        );
+echo json_encode($marca);
+
 ?>

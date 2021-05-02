@@ -25,5 +25,7 @@ $productos = array(
             'nombre' => "Pan dulces",
             'disponibilidad' => FALSE
         )
-)
+        );
+echo json_encode($productos);
+
 ?>

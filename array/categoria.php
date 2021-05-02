@@ -13,12 +13,16 @@ $categoria = array(
 
         '3'=> array(
             'id' => 3,
-            'categoria' => "Cookies"
+            'categoria' => "Cookis"
         ),
 
         '4'=> array(
             'id' => 2,
             'categoria' => "Otros"
-        )
-)
+        ),
+    );
+
+
+echo json_encode($categoria);
+
 ?>

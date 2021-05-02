@@ -20,5 +20,9 @@ $comentarios = array(
             'id' => 2,
             'comentario' => "Pan dulce, con frutos secos y fruta abrillantada o con chips de chocolate"
         )
-)
+        );
+
+echo json_encode($comentarios);
+
+
 ?>
