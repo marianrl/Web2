@@ -17,7 +17,7 @@ $categoria = array(
         ),
 
         '4'=> array(
-            'id' => 2,
+            'id' => 4,
             'categoria' => "Otros"
         ),
     );

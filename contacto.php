@@ -1,15 +1,12 @@
-<!doctype html>
-<html lang="es">
-
 <?php
 
-    require_once("../part/head.php");
+    require_once("part/head.php");
 
 ?>
 
 <?php
 
-    require_once("../part/header.php");
+    require_once("part/header.php");
 
 ?>
 
@@ -20,7 +17,7 @@
 
         <h3>
             <a href="https://www.google.com.ar/maps/@-34.6010516,-58.4287612,15z" target="_blank"><img
-                    src="../imagenes/mapa.jpeg" alt="mapa" width="1280" height="716"
+                    src="imagenes/mapa.jpeg" alt="mapa" width="1280" height="716"
                     class="mapa-fluid  container-fluid col-lg-6 col-md-6 col-sm-6 col-6"></a>
 
         </h3>
@@ -90,11 +87,11 @@
 
 
 <?php
-        require_once('../part/footer.php');
+        require_once('part/footer.php');
     ?>
 
 <?php
-        require_once('../part/java.php');
+        require_once('part/java.php');
     ?>
 </body>
 

@@ -1,6 +1,5 @@
-<!doctype html>
-<html lang="es">
 <?php
+
 
 require_once("part/head.php");
 
