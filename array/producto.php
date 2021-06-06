@@ -30,7 +30,7 @@ $productos = array(
         ),
 
         '4'=> array(
-            'id' => 2,
+            'id' => 4,
             'nombre' => "Pan dulces",
             'disponibilidad' => FALSE,
             'imagen' => 'torta10.jpg',

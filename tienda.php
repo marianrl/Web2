@@ -1,35 +1,44 @@
 <?php
 require_once("part/head.php");
-?>
-<?php
 require_once("part/header.php");
 ?>
 <body>
 <main>
     <section class="conteiner">
         <h1 class="conteiner fluid">Tienda</h1>
+        <?php
+require_once("part/sub_menu.php");
+?>
+
         <div class="container-fluid galeriadivcards">
             <div class="row">
                 <?php
                 $arrayProductos = json_decode(file_get_contents('array/producto.json'), TRUE);
                 /*var_dump($arrayProductos);die(); */
-                foreach ($arrayProductos as $productos) {
-                ?>
+                foreach($arrayProductos as $producto){ 
+					$print = true;
+
+					if(!empty($_GET['categoria']) AND $print){
+						if($producto['categoria'] != $_GET['categoria']) $print = FALSE;
+					}
+				 	if($print){ 
+			        ?>
                     <ul class="thumbnails">
                         <li>
                             <div class="thumbnail">
-                                <a href="product_details.php"><img src="imagenes/<?php echo $productos['imagen'] ?>" alt="" class="img-fluid"></a>
+                                <a href="detalleproducto.php?producto=<?php echo $producto['id'] ?>"><img src="imagenes/<?php echo $producto['imagen'] ?>" alt="" class="img-fluid"></a>
                                 <div class="caption cntr">
-                                    <p><strong><?php echo $productos['nombre'] ?></strong></p>
-                                    <p class="pi"><?php echo cortar_palabras($productos['descripcion'], 50) ?></p>
-                                    <h4><a class="shopBtn" href="#" title="add to cart"> VER </a></h4>
+                                    <p><strong><?php echo $producto['nombre'] ?></strong></p>
+                                    <p class="pi"><?php echo cortar_palabras($producto['descripcion'], 50) ?></p>
+                                    <h4><a class="shopBtn" href="detalleproducto.php?producto=<?php echo $producto['id'] ?>" title="Ver"> VER </a></h4>
                                     <br class="clr">
                                 </div>
                             </div>
                         </li>
                     </ul>
                 <?php
-                    } ?> 
+                    }
+                }     ?> 
             </div>
         </div>   
     </section>
@@ -37,9 +46,5 @@ require_once("part/header.php");
 
 <?php
 require_once('part/footer.php');
-?>
-
-<?php
 require_once('part/java.php');
 ?>
-</body>
