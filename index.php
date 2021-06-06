@@ -24,7 +24,7 @@ require_once("part/head.php");
                 </div>
             </div>
             <?php
-                require("part/carrusel_index3.php");
+                require("part/carrusel_index.php");
                 ?>
             <div class="container col-lg-6 col-sm-5 col-md-6">
                 <p><span>Bienvenidos a Teckel's bakery, nos especializamos en pastelería clásica, todos nuestros
@@ -35,7 +35,7 @@ require_once("part/head.php");
             </div>
 
             <?php
-                require("part/carrusel_index3.php");
+                require("part/carrusel_index.php");
                 ?>
 
             <div class="container col-lg-6 col-sm-5 col-md-6">

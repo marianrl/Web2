@@ -11,7 +11,7 @@ require_once('helpers/string.php')
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="index3.php">
+        <a class="navbar-brand" href="index.php">
             <img src="imagenes/logo.png" width="102" height="100" alt="Logo teckel's">
         </a>
 

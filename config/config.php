@@ -1,5 +1,5 @@
 <?php
 
-define("URL_BASE","http://localhost/tpweb/")
+define("URL_BASE","http://localhost/")
 
 ?>

@@ -13,7 +13,7 @@ $categoria = array(
 
         '3'=> array(
             'id' => 3,
-            'categoria' => "Cookis"
+            'categoria' => "Cookies"
         ),
 
         '4'=> array(
