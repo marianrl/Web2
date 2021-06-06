@@ -41,7 +41,6 @@ require_once("part/header.php");
             </div>
         </section>
     </main>
-
     <?php
     require_once('part/footer.php');
     require_once('part/java.php');

@@ -1,8 +1,5 @@
 <?php
-
-
 require_once("part/head.php");
-
 ?>
 
 <body>

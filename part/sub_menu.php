@@ -1,4 +1,4 @@
-<div class="btn-group w-100 mb-2">
+<div class="btn-group mb-4">
 	<a href="tienda.php?categoria=" class="btn btn-info">Todos</a>
 	<?php
 	$arrayCategoria = json_decode(file_get_contents('array/categoria.json'), TRUE);
