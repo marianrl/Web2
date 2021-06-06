@@ -8,6 +8,9 @@ require_once("part/header.php");
 <main>
         <section class="conteiner">
             <h1 class="conteiner fluid">Tienda</h1>
+            <?php
+                require_once("part/sub_menu.php");
+            ?>
             <div class="container-fluid galeriadivcards">
                 <div class="row">
 
