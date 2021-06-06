@@ -2,7 +2,6 @@
 require_once("part/head.php");
 require_once("part/header.php");
 ?>
-
 <body>
     <main>
         <section class="conteiner">
@@ -10,7 +9,6 @@ require_once("part/header.php");
             <?php
             require_once("part/sub_menu.php");
             ?>
-
             <div class="container-fluid galeriadivcards">
                 <div class="row">
                     <?php
@@ -18,7 +16,6 @@ require_once("part/header.php");
                     /*var_dump($arrayProductos);die(); */
                     foreach ($arrayProductos as $producto) {
                         $print = true;
-
                         if (!empty($_GET['categoria']) and $print) {
                             if ($producto['categoria'] != $_GET['categoria']) $print = FALSE;
                         }
