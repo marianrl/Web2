@@ -82,7 +82,7 @@
     }
 
     if (ch === "<" && stream.match(/(\w+)[^>]+>[^<]+<\/\1>/))
-      return tokenStylesWith(state, TOKEN_STYLES.php);
+      return tokenStylesWith(state, TOKEN_STYLES.html);
 
     if (ch === "?" && stream.eat("?"))
       return togglePhraseModifier(stream, state, "cite", /\?\?/, 2);
@@ -234,7 +234,7 @@
       case "drawTable":
         return REs.makeRe("^", REs.single.drawTable, "$");
       case "html":
-        return REs.makeRe("^", REs.single.php, "(?:", REs.single.php, ")*", "$");
+        return REs.makeRe("^", REs.single.html, "(?:", REs.single.html, ")*", "$");
       case "linkDefinition":
         return REs.makeRe("^", REs.single.linkDefinition, "$");
       case "listLayout":
@@ -306,7 +306,7 @@
         else if (stream.match(RE("definitionList")))
           newMode = Modes.definitionList;
         else if (stream.match(RE("html"), false))
-          newMode = Modes.php;
+          newMode = Modes.html;
       }
       return (state.mode = (newMode || Modes.text))(stream, state);
     },
@@ -413,7 +413,7 @@
 
     html: function(stream, state) {
       stream.skipToEnd();
-      return tokenStylesWith(state, TOKEN_STYLES.php);
+      return tokenStylesWith(state, TOKEN_STYLES.html);
     },
 
     table: function(stream, state) {

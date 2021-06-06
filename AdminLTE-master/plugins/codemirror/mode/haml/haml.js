@@ -92,7 +92,7 @@
         }
       }
 
-      return htmlMode.token(stream, state.phpState);
+      return htmlMode.token(stream, state.htmlState);
     }
 
     return {
@@ -111,7 +111,7 @@
 
       copyState: function(state) {
         return {
-          htmlState : CodeMirror.copyState(htmlMode, state.phpState),
+          htmlState : CodeMirror.copyState(htmlMode, state.htmlState),
           rubyState: CodeMirror.copyState(rubyMode, state.rubyState),
           indented: state.indented,
           previousToken: state.previousToken,

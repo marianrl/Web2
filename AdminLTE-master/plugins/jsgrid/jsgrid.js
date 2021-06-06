@@ -888,7 +888,7 @@
 
         _createPagerButton: function(text, css, handler) {
             var $link = $("<a>").attr("href", EMPTY_HREF)
-                .php(text)
+                .html(text)
                 .on("click", $.proxy(handler, this));
 
             return $("<span>").addClass(css).append($link);

@@ -18,7 +18,7 @@
     function insertLegend(plot, options, placeholder, legendEntries) {
         // clear before redraw
         if (options.legend.container != null) {
-            $(options.legend.container).php('');
+            $(options.legend.container).html('');
         } else {
             placeholder.find('.legend').remove();
         }

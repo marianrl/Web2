@@ -28,7 +28,7 @@ This plugin is used to make available some browser-related utility functions.
 
          This function returns the current pixel ratio defined by the product of desktop
          zoom and page zoom.
-         Additional info: https://www.php5rocks.com/en/tutorials/canvas/hidpi/
+         Additional info: https://www.html5rocks.com/en/tutorials/canvas/hidpi/
         */
         getPixelRatio: function(context) {
             var devicePixelRatio = window.devicePixelRatio || 1,
@@ -50,7 +50,7 @@ This plugin is used to make available some browser-related utility functions.
         isSafari: function() {
             // *** https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
             // Safari 3.0+ "[object HTMLElementConstructor]"
-            return /constructor/i.test(window.top.phpElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window.top['safari'] || (typeof window.top.safari !== 'undefined' && window.top.safari.pushNotification));
+            return /constructor/i.test(window.top.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window.top['safari'] || (typeof window.top.safari !== 'undefined' && window.top.safari.pushNotification));
         },
 
         isMobileSafari: function() {

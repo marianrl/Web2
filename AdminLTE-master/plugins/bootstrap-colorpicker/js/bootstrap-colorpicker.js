@@ -3542,14 +3542,14 @@ var Preview = function (_Extension) {
       _get(Preview.prototype.__proto__ || Object.getPrototypeOf(Preview.prototype), 'onUpdate', this).call(this, event);
 
       if (!event.color) {
-        this.elementInner.css('backgroundColor', null).css('color', null).php('');
+        this.elementInner.css('backgroundColor', null).css('color', null).html('');
         return;
       }
 
       this.elementInner.css('backgroundColor', event.color.toRgbString());
 
       if (this.options.showText) {
-        this.elementInner.php(event.color.string(this.options.format || this.colorpicker.format));
+        this.elementInner.html(event.color.string(this.options.format || this.colorpicker.format));
 
         if (event.color.isDark() && event.color.alpha > 0.5) {
           this.elementInner.css('color', 'white');

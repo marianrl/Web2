@@ -37,7 +37,7 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     '--no-langdetect',
     '--Werror',
     `--filterpattern "${ignores}"`,
-    './*.php',
+    './*.html',
     'docs_html/',
     'pages/'
   ]

@@ -3,20 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Modals & Alerts</title>
+  <title>AdminLTE 3 | Timeline</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <!-- SweetAlert2 -->
-  <link rel="stylesheet" href="../../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
-  <!-- Toastr -->
-  <link rel="stylesheet" href="../../plugins/toastr/toastr.min.css">
-  <!-- Theme style -->
+  <!-- AdminLTE css -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -26,7 +23,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../../index.php" class="nav-link">Home</a>
+        <a href="../../index3.php" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -159,7 +156,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../../index.php" class="brand-link">
+    <a href="../../index3.php" class="brand-link">
       <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
@@ -192,7 +189,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+               <br /> with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -215,7 +212,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../../index.php" class="nav-link">
+                <a href="../../index3.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v3</p>
                 </a>
@@ -360,7 +357,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../UI/modals.php" class="nav-link active">
+                <a href="../UI/modals.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Modals & Alerts</p>
                 </a>
@@ -372,7 +369,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../UI/timeline.php" class="nav-link">
+                <a href="../UI/timeline.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Timeline</p>
                 </a>
@@ -838,15 +835,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>
-              Modals & Alerts
-              <small>new</small>
-            </h1>
+            <h1>Timeline</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Modals & Alerts</li>
+              <li class="breadcrumb-item active">Timeline</li>
             </ol>
           </div>
         </div>
@@ -856,440 +850,119 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+
+        <!-- Timelime example  -->
         <div class="row">
           <div class="col-md-12">
-            <div class="card card-primary card-outline">
-              <div class="card-header">
-                <h3 class="card-title">
-                  <i class="fas fa-edit"></i>
-                  Modal Examples
-                </h3>
+            <!-- The time line -->
+            <div class="timeline">
+              <!-- timeline time label -->
+              <div class="time-label">
+                <span class="bg-red">10 Feb. 2014</span>
               </div>
-              <div class="card-body">
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
-                  Launch Default Modal
-                </button>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-primary">
-                  Launch Primary Modal
-                </button>
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-secondary">
-                  Launch Secondary Modal
-                </button>
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">
-                  Launch Info Modal
-                </button>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-danger">
-                  Launch Danger Modal
-                </button>
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-warning">
-                  Launch Warning Modal
-                </button>
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success">
-                  Launch Success Modal
-                </button>
-                <br />
-                <br />
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-sm">
-                  Launch Small Modal
-                </button>
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-lg">
-                  Launch Large Modal
-                </button>
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-xl">
-                  Launch Extra Large Modal
-                </button>
-                <br />
-                <br />
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-overlay">
-                  Launch Modal with Overlay
-                </button>
-                <div class="text-muted mt-3">
-                  Instructions for how to use modals are available on the
-                  <a href="https://getbootstrap.com/docs/4.4/components/modal/">Bootstrap documentation</a>
+              <!-- /.timeline-label -->
+              <!-- timeline item -->
+              <div>
+                <i class="fas fa-envelope bg-blue"></i>
+                <div class="timeline-item">
+                  <span class="time"><i class="fas fa-clock"></i> 12:05</span>
+                  <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
+
+                  <div class="timeline-body">
+                    Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
+                    weebly ning heekya handango imeem plugg dopplr jibjab, movity
+                    jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
+                    quora plaxo ideeli hulu weebly balihoo...
+                  </div>
+                  <div class="timeline-footer">
+                    <a class="btn btn-primary btn-sm">Read more</a>
+                    <a class="btn btn-danger btn-sm">Delete</a>
+                  </div>
                 </div>
               </div>
-              <!-- /.card -->
-            </div>
-
-            <div class="card card-info card-outline">
-              <div class="card-header">
-                <h3 class="card-title">
-                  <i class="fas fa-edit"></i>
-                  Toasts Examples <small>built in AdminLTE</small>
-                </h3>
-              </div>
-              <div class="card-body">
-                <button type="button" class="btn btn-default toastsDefaultDefault">
-                  Launch Default Toast
-                </button>
-                <button type="button" class="btn btn-default toastsDefaultFull">
-                  Launch Full Toast (with icon)
-                </button>
-                <button type="button" class="btn btn-default toastsDefaultFullImage">
-                  Launch Full Toast (with image)
-                </button>
-                <button type="button" class="btn btn-default toastsDefaultAutohide">
-                  Launch Default Toasts with autohide
-                </button>
-                <button type="button" class="btn btn-default toastsDefaultNotFixed">
-                  Launch Default Toasts with not fixed
-                </button>
-                <br />
-                <br />
-                <button type="button" class="btn btn-default toastsDefaultTopLeft">
-                  Launch Default Toast (topLeft)
-                </button>
-                <button type="button" class="btn btn-default toastsDefaultBottomRight">
-                  Launch Default Toast (bottomRight)
-                </button>
-                <button type="button" class="btn btn-default toastsDefaultBottomLeft">
-                  Launch Default Toast (bottomLeft)
-                </button>
-                <br />
-                <br />
-                <button type="button" class="btn btn-success toastsDefaultSuccess">
-                  Launch Success Toast
-                </button>
-                <button type="button" class="btn btn-info toastsDefaultInfo">
-                  Launch Info Toast
-                </button>
-                <button type="button" class="btn btn-warning toastsDefaultWarning">
-                  Launch Warning Toast
-                </button>
-                <button type="button" class="btn btn-danger toastsDefaultDanger">
-                  Launch Danger Toast
-                </button>
-                <button type="button" class="btn btn-default bg-maroon toastsDefaultMaroon">
-                  Launch Maroon Toast
-                </button>
-                <div class="text-muted mt-3">
-
+              <!-- END timeline item -->
+              <!-- timeline item -->
+              <div>
+                <i class="fas fa-user bg-green"></i>
+                <div class="timeline-item">
+                  <span class="time"><i class="fas fa-clock"></i> 5 mins ago</span>
+                  <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
                 </div>
               </div>
-            </div>
-
-            <div class="card card-success card-outline">
-              <div class="card-header">
-                <h3 class="card-title">
-                  <i class="fas fa-edit"></i>
-                  SweetAlert2 Examples
-                </h3>
-              </div>
-              <div class="card-body">
-                <button type="button" class="btn btn-success swalDefaultSuccess">
-                  Launch Success Toast
-                </button>
-                <button type="button" class="btn btn-info swalDefaultInfo">
-                  Launch Info Toast
-                </button>
-                <button type="button" class="btn btn-danger swalDefaultError">
-                  Launch Error Toast
-                </button>
-                <button type="button" class="btn btn-warning swalDefaultWarning">
-                  Launch Warning Toast
-                </button>
-                <button type="button" class="btn btn-default swalDefaultQuestion">
-                  Launch Question Toast
-                </button>
-                <div class="text-muted mt-3">
-                  For more examples look at <a href="https://sweetalert2.github.io/">https://sweetalert2.github.io/</a>
+              <!-- END timeline item -->
+              <!-- timeline item -->
+              <div>
+                <i class="fas fa-comments bg-yellow"></i>
+                <div class="timeline-item">
+                  <span class="time"><i class="fas fa-clock"></i> 27 mins ago</span>
+                  <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
+                  <div class="timeline-body">
+                    Take me to your leader!
+                    Switzerland is small and neutral!
+                    We are more like Germany, ambitious and misunderstood!
+                  </div>
+                  <div class="timeline-footer">
+                    <a class="btn btn-warning btn-sm">View comment</a>
+                  </div>
                 </div>
               </div>
-              <!-- /.card -->
-            </div>
-
-            <div class="card card-warning card-outline">
-              <div class="card-header">
-                <h3 class="card-title">
-                  <i class="fas fa-edit"></i>
-                  Toastr Examples
-                </h3>
+              <!-- END timeline item -->
+              <!-- timeline time label -->
+              <div class="time-label">
+                <span class="bg-green">3 Jan. 2014</span>
               </div>
-              <div class="card-body">
-                <button type="button" class="btn btn-success toastrDefaultSuccess">
-                  Launch Success Toast
-                </button>
-                <button type="button" class="btn btn-info toastrDefaultInfo">
-                  Launch Info Toast
-                </button>
-                <button type="button" class="btn btn-danger toastrDefaultError">
-                  Launch Error Toast
-                </button>
-                <button type="button" class="btn btn-warning toastrDefaultWarning">
-                  Launch Warning Toast
-                </button>
-                <div class="text-muted mt-3">
-                  For more examples look at <a href="https://codeseven.github.io/toastr/">https://codeseven.github.io/toastr/</a>
+              <!-- /.timeline-label -->
+              <!-- timeline item -->
+              <div>
+                <i class="fa fa-camera bg-purple"></i>
+                <div class="timeline-item">
+                  <span class="time"><i class="fas fa-clock"></i> 2 days ago</span>
+                  <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
+                  <div class="timeline-body">
+                    <img src="https://placehold.it/150x100" alt="...">
+                    <img src="https://placehold.it/150x100" alt="...">
+                    <img src="https://placehold.it/150x100" alt="...">
+                    <img src="https://placehold.it/150x100" alt="...">
+                    <img src="https://placehold.it/150x100" alt="...">
+                  </div>
                 </div>
               </div>
-              <!-- /.card -->
+              <!-- END timeline item -->
+              <!-- timeline item -->
+              <div>
+                <i class="fas fa-video bg-maroon"></i>
+
+                <div class="timeline-item">
+                  <span class="time"><i class="fas fa-clock"></i> 5 days ago</span>
+
+                  <h3 class="timeline-header"><a href="#">Mr. Doe</a> shared a video</h3>
+
+                  <div class="timeline-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tMWkeBIohBs" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="timeline-footer">
+                    <a href="#" class="btn btn-sm bg-maroon">See comments</a>
+                  </div>
+                </div>
+              </div>
+              <!-- END timeline item -->
+              <div>
+                <i class="fas fa-clock bg-gray"></i>
+              </div>
             </div>
           </div>
           <!-- /.col -->
         </div>
-        <!-- ./row -->
-      </div><!-- /.container-fluid -->
-
-      <div class="modal fade" id="modal-default">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Default Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
       </div>
-      <!-- /.modal -->
-
-      <div class="modal fade" id="modal-overlay">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="overlay">
-                <i class="fas fa-2x fa-sync fa-spin"></i>
-            </div>
-            <div class="modal-header">
-              <h4 class="modal-title">Default Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
-      <div class="modal fade" id="modal-primary">
-        <div class="modal-dialog">
-          <div class="modal-content bg-primary">
-            <div class="modal-header">
-              <h4 class="modal-title">Primary Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-outline-light">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
-      <div class="modal fade" id="modal-secondary">
-        <div class="modal-dialog">
-          <div class="modal-content bg-secondary">
-            <div class="modal-header">
-              <h4 class="modal-title">Secondary Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-outline-light">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
-      <div class="modal fade" id="modal-info">
-        <div class="modal-dialog">
-          <div class="modal-content bg-info">
-            <div class="modal-header">
-              <h4 class="modal-title">Info Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-outline-light">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
-      <div class="modal fade" id="modal-warning">
-        <div class="modal-dialog">
-          <div class="modal-content bg-warning">
-            <div class="modal-header">
-              <h4 class="modal-title">Warning Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-outline-dark">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
-      <div class="modal fade" id="modal-success">
-        <div class="modal-dialog">
-          <div class="modal-content bg-success">
-            <div class="modal-header">
-              <h4 class="modal-title">Success Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-outline-light">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
-      <div class="modal fade" id="modal-danger">
-        <div class="modal-dialog">
-          <div class="modal-content bg-danger">
-            <div class="modal-header">
-              <h4 class="modal-title">Danger Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-outline-light">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
-      <div class="modal fade" id="modal-sm">
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Small Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
-      <div class="modal fade" id="modal-lg">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Large Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
-      <div class="modal fade" id="modal-xl">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Extra Large Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
+      <!-- /.timeline -->
 
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.1.0
@@ -1309,168 +982,9 @@
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- SweetAlert2 -->
-<script src="../../plugins/sweetalert2/sweetalert2.min.js"></script>
-<!-- Toastr -->
-<script src="../../plugins/toastr/toastr.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<!-- Page specific script -->
-<script>
-  $(function() {
-    var Toast = Swal.mixin({
-      toast: true,
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 3000
-    });
-
-    $('.swalDefaultSuccess').click(function() {
-      Toast.fire({
-        icon: 'success',
-        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.swalDefaultInfo').click(function() {
-      Toast.fire({
-        icon: 'info',
-        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.swalDefaultError').click(function() {
-      Toast.fire({
-        icon: 'error',
-        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.swalDefaultWarning').click(function() {
-      Toast.fire({
-        icon: 'warning',
-        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.swalDefaultQuestion').click(function() {
-      Toast.fire({
-        icon: 'question',
-        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-
-    $('.toastrDefaultSuccess').click(function() {
-      toastr.success('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-    });
-    $('.toastrDefaultInfo').click(function() {
-      toastr.info('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-    });
-    $('.toastrDefaultError').click(function() {
-      toastr.error('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-    });
-    $('.toastrDefaultWarning').click(function() {
-      toastr.warning('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-    });
-
-    $('.toastsDefaultDefault').click(function() {
-      $(document).Toasts('create', {
-        title: 'Toast Title',
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.toastsDefaultTopLeft').click(function() {
-      $(document).Toasts('create', {
-        title: 'Toast Title',
-        position: 'topLeft',
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.toastsDefaultBottomRight').click(function() {
-      $(document).Toasts('create', {
-        title: 'Toast Title',
-        position: 'bottomRight',
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.toastsDefaultBottomLeft').click(function() {
-      $(document).Toasts('create', {
-        title: 'Toast Title',
-        position: 'bottomLeft',
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.toastsDefaultAutohide').click(function() {
-      $(document).Toasts('create', {
-        title: 'Toast Title',
-        autohide: true,
-        delay: 750,
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.toastsDefaultNotFixed').click(function() {
-      $(document).Toasts('create', {
-        title: 'Toast Title',
-        fixed: false,
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.toastsDefaultFull').click(function() {
-      $(document).Toasts('create', {
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
-        title: 'Toast Title',
-        subtitle: 'Subtitle',
-        icon: 'fas fa-envelope fa-lg',
-      })
-    });
-    $('.toastsDefaultFullImage').click(function() {
-      $(document).Toasts('create', {
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
-        title: 'Toast Title',
-        subtitle: 'Subtitle',
-        image: '../../dist/img/user3-128x128.jpg',
-        imageAlt: 'User Picture',
-      })
-    });
-    $('.toastsDefaultSuccess').click(function() {
-      $(document).Toasts('create', {
-        class: 'bg-success',
-        title: 'Toast Title',
-        subtitle: 'Subtitle',
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.toastsDefaultInfo').click(function() {
-      $(document).Toasts('create', {
-        class: 'bg-info',
-        title: 'Toast Title',
-        subtitle: 'Subtitle',
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.toastsDefaultWarning').click(function() {
-      $(document).Toasts('create', {
-        class: 'bg-warning',
-        title: 'Toast Title',
-        subtitle: 'Subtitle',
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.toastsDefaultDanger').click(function() {
-      $(document).Toasts('create', {
-        class: 'bg-danger',
-        title: 'Toast Title',
-        subtitle: 'Subtitle',
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.toastsDefaultMaroon').click(function() {
-      $(document).Toasts('create', {
-        class: 'bg-maroon',
-        title: 'Toast Title',
-        subtitle: 'Subtitle',
-        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-  });
-</script>
 </body>
 </html>

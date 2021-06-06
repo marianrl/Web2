@@ -14065,7 +14065,7 @@ var FullCalendar = (function (exports) {
         return items.map(function (item) { return gcalItemToRawEventDef(item, gcalTimezone); });
     }
     function gcalItemToRawEventDef(item, gcalTimezone) {
-        var url = item.phpLink || null;
+        var url = item.htmlLink || null;
         // make the URLs for each event show times in the correct timezone
         if (url && gcalTimezone) {
             url = injectQsComponent(url, 'ctz=' + gcalTimezone);

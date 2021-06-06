@@ -134,7 +134,7 @@
       content = formatString(dualListbox.settings.infoTextFiltered, [visible1, all1]);
     }
 
-    dualListbox.elements.info1.php(content);
+    dualListbox.elements.info1.html(content);
     dualListbox.elements.box1.toggleClass('filtered', !(visible1 === all1 || all1 === 0));
 
     if (all2 === 0) {
@@ -145,7 +145,7 @@
       content = formatString(dualListbox.settings.infoTextFiltered, [visible2, all2]);
     }
 
-    dualListbox.elements.info2.php(content);
+    dualListbox.elements.info2.html(content);
     dualListbox.elements.box2.toggleClass('filtered', !(visible2 === all2 || all2 === 0));
   }
 
@@ -510,8 +510,8 @@
     },
     setFilterTextClear: function(value, refresh) {
       this.settings.filterTextClear = value;
-      this.elements.filterClear1.php(value);
-      this.elements.filterClear2.php(value);
+      this.elements.filterClear1.html(value);
+      this.elements.filterClear2.html(value);
       if (refresh) {
         refreshSelects(this);
       }
@@ -624,9 +624,9 @@
     setSelectedListLabel: function(value, refresh) {
       this.settings.selectedListLabel = value;
       if (value) {
-        this.elements.label2.show().php(value);
+        this.elements.label2.show().html(value);
       } else {
-        this.elements.label2.hide().php(value);
+        this.elements.label2.hide().html(value);
       }
       if (refresh) {
         refreshSelects(this);
@@ -636,9 +636,9 @@
     setNonSelectedListLabel: function(value, refresh) {
       this.settings.nonSelectedListLabel = value;
       if (value) {
-        this.elements.label1.show().php(value);
+        this.elements.label1.show().html(value);
       } else {
-        this.elements.label1.hide().php(value);
+        this.elements.label1.hide().html(value);
       }
       if (refresh) {
         refreshSelects(this);
@@ -792,7 +792,7 @@
     },
     setBtnMoveText: function(value, refresh) {
       this.settings.btnMoveText = value;
-      this.elements.moveButton.php(value);
+      this.elements.moveButton.html(value);
       if (refresh) {
         refreshSelects(this);
       }
@@ -800,7 +800,7 @@
     },
     setBtnRemoveText: function(value, refresh) {
       this.settings.btnMoveText = value;
-      this.elements.removeButton.php(value);
+      this.elements.removeButton.html(value);
       if (refresh) {
         refreshSelects(this);
       }
@@ -808,7 +808,7 @@
     },
     setBtnMoveAllText: function(value, refresh) {
       this.settings.btnMoveText = value;
-      this.elements.moveAllButton.php(value);
+      this.elements.moveAllButton.html(value);
       if (refresh) {
         refreshSelects(this);
       }
@@ -816,7 +816,7 @@
     },
     setBtnRemoveAllText: function(value, refresh) {
       this.settings.btnMoveText = value;
-      this.elements.removeAllButton.php(value);
+      this.elements.removeAllButton.html(value);
       if (refresh) {
         refreshSelects(this);
       }

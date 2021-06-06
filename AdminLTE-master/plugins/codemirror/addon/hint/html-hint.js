@@ -341,7 +341,7 @@
   for (var tag in data) if (data.hasOwnProperty(tag) && data[tag] != s)
     populate(data[tag]);
 
-  CodeMirror.phpSchema = data;
+  CodeMirror.htmlSchema = data;
   function htmlHint(cm, options) {
     var local = {schemaInfo: data};
     if (options) for (var opt in options) local[opt] = options[opt];

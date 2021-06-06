@@ -20,7 +20,7 @@ node_modules/
 bower_components/
 
 # Plugins
-/plugins/**/*.php
+/plugins/**/*.html
 /plugins/**/*.less
 /plugins/**/*.md
 /plugins/**/*.scss
@@ -66,6 +66,6 @@ bower_components/
 
 # ETC
 TODO
-test.php
+test.html
 ad.js
 /.cache/

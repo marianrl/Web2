@@ -40,7 +40,7 @@ To get the iframe 100% working you need the following content-wrapper markup:
     <a class="nav-link bg-light" href="#" data-widget="iframe-fullscreen"><i class="fas fa-expand"></i></a>
   </div>
   <div class="tab-content">
-    <div class="tab-pane fade active show" id="panel-index" role="tabpanel" aria-labelledby="tab-index"><iframe src="./index.php" style="height: 671px;"></iframe></div>
+    <div class="tab-pane fade active show" id="panel-index" role="tabpanel" aria-labelledby="tab-index"><iframe src="./index.html" style="height: 671px;"></iframe></div>
     <div class="tab-empty">
       <h2 class="display-4">No tab selected!</h2>
     </div>
@@ -115,4 +115,4 @@ $('.content-wrapper').IFrame({
 |removeActiveTab| Remove active iframe tab.
 {: .table .table-bordered .bg-light}
 
-Example: `$('.content-wrapper').IFrame('createTab', 'Home', 'index.php, 'index', true)`
+Example: `$('.content-wrapper').IFrame('createTab', 'Home', 'index.html, 'index', true)`

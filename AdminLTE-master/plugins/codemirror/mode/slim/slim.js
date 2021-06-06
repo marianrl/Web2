@@ -186,7 +186,7 @@
         state.tokenize = rubyInQuote("}", state.tokenize);
         return null;
       }
-      return maybeBackup(stream, state, /[^\\]#\{/, 1, htmlMode.token(stream, state.phpState));
+      return maybeBackup(stream, state, /[^\\]#\{/, 1, htmlMode.token(stream, state.htmlState));
     }
 
     function startHtmlLine(lastTokenize) {
@@ -522,7 +522,7 @@
 
       copyState: function(state) {
         return {
-          htmlState : CodeMirror.copyState(htmlMode, state.phpState),
+          htmlState : CodeMirror.copyState(htmlMode, state.htmlState),
           rubyState: CodeMirror.copyState(rubyMode, state.rubyState),
           subMode: state.subMode,
           subState: state.subMode && CodeMirror.copyState(state.subMode, state.subState),

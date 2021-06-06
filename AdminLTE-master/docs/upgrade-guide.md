@@ -16,7 +16,7 @@ Since AdminLTE v3.0 Bootstrap 4 is complete included in AdminLTE's CSS file. You
 The biggest change in Main Header is the Logo is moved to Main Sidebar and the Main Header has now color variations, here are all changes:
 
 1. Logo
-  - `<a href="index2.php" class="logo">` moved & rebuild to `.brand-link` inside `.main-sidebar`
+  - `<a href="index2.html" class="logo">` moved & rebuild to `.brand-link` inside `.main-sidebar`
 2. Header / Nav
   - `<header class="main-header">` & `<nav class="navbar navbar-static-top">` merged with `<nav class="main-header navbar navbar-expand navbar-white navbar-light">`
 3. Sidebar Toggle / Left Navbar
@@ -31,7 +31,7 @@ Like above the biggest change is the Main Sidebar contains now the Logo and the 
 1. Main Sidebar Color
   - `<aside class="main-sidebar">` replaced with `<aside class="main-sidebar sidebar-dark-primary">`
 2. Logo / Brand Link
-  - `<a href="index.php" class="brand-link"><img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"><span class="brand-text font-weight-light">AdminLTE 3</span></a>` replaces the old logo
+  - `<a href="index3.html" class="brand-link"><img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"><span class="brand-text font-weight-light">AdminLTE 3</span></a>` replaces the old logo
 3. Sidebar
   - `<section class="sidebar">` replaced with `<div class="sidebar">`
 4. User Panel
@@ -55,7 +55,7 @@ Like above the biggest change is the Main Sidebar contains now the Logo and the 
 Old sample entry
 ```html
 <li>
-  <a href="pages/widgets.php">
+  <a href="pages/widgets.html">
     <i class="fa fa-th"></i> <span>Widgets</span>
     <span class="pull-right-container">
       <small class="label pull-right bg-green">new</small>
@@ -68,7 +68,7 @@ Old sample entry
 New sample entry
 ```html
 <li class="nav-item">
-  <a href="pages/widgets.php" class="nav-link">
+  <a href="pages/widgets.html" class="nav-link">
     <i class="nav-icon fas fa-th"></i>
     <p>
       Widgets
@@ -92,7 +92,7 @@ Old sample entry (with tree menu)
     </span>
   </a>
   <ul class="treeview-menu">
-    <li class="active"><a href="index.php">
+    <li class="active"><a href="index.html">
       <i class="fa fa-circle-o"></i> Dashboard v1</a>
     </li>
   </ul>
@@ -112,7 +112,7 @@ New sample entry (with tree menu)
   </a>
   <ul class="nav nav-treeview">
     <li class="nav-item">
-      <a href="index.php" class="nav-link active">
+      <a href="index.html" class="nav-link active">
         <i class="far fa-circle nav-icon"></i>
         <p>Dashboard v1</p>
       </a>

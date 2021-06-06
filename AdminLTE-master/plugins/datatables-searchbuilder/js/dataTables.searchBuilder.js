@@ -174,7 +174,7 @@
 			var error = this.dom.error;
 
 			if ( msg ) {
-				error.php( msg );
+				error.html( msg );
 			}
 			else {
 				error.empty();
@@ -926,7 +926,7 @@
 			select.val( val );
 
 			var selected = select.find('option:selected');
-			span.php( selected.length !== 0 ?
+			span.html( selected.length !== 0 ?
 				selected.text() :
 				this.c.i18n.unknown
 			);

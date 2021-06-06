@@ -887,7 +887,7 @@ $.extend( Scroller.prototype, {
 		{
 			for ( var i=0, iLen=n.length ; i<iLen ; i++ )
 			{
-				$(n[i]).php( sOut );
+				$(n[i]).html( sOut );
 			}
 		}
 
@@ -1067,7 +1067,7 @@ $.extend( Scroller.prototype, {
 		}
 		if (this.s.labelVisible) {
 			this.dom.label
-				.php( this.s.dt.fnFormatNumber( parseInt( this.s.topRowFloat, 10 )+1 ) )
+				.html( this.s.dt.fnFormatNumber( parseInt( this.s.topRowFloat, 10 )+1 ) )
 				.css( 'top', iScrollTop + (iScrollTop * heights.labelFactor ) )
 				.css( 'display', 'block' );
 		}

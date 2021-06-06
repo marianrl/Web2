@@ -2069,7 +2069,7 @@ var TempusDominusBootstrap4 = function ($) {
 
     _proto2._iconTag = function _iconTag(iconName) {
       if (typeof feather !== 'undefined' && this._useFeatherIcons() && feather.icons[iconName]) {
-        return $('<span>').php(feather.icons[iconName].toSvg());
+        return $('<span>').html(feather.icons[iconName].toSvg());
       } else {
         return $('<span>').addClass(iconName);
       }
@@ -2106,7 +2106,7 @@ var TempusDominusBootstrap4 = function ($) {
       if (this._isEnabled('m')) {
         if (this._isEnabled('h')) {
           topRow.append($('<td>').addClass('separator'));
-          middleRow.append($('<td>').addClass('separator').php(':'));
+          middleRow.append($('<td>').addClass('separator').html(':'));
           bottomRow.append($('<td>').addClass('separator'));
         }
 
@@ -2129,7 +2129,7 @@ var TempusDominusBootstrap4 = function ($) {
       if (this._isEnabled('s')) {
         if (this._isEnabled('m')) {
           topRow.append($('<td>').addClass('separator'));
-          middleRow.append($('<td>').addClass('separator').php(':'));
+          middleRow.append($('<td>').addClass('separator').html(':'));
           bottomRow.append($('<td>').addClass('separator'));
         }
 
@@ -2470,7 +2470,7 @@ var TempusDominusBootstrap4 = function ($) {
       }
 
       html += "<span data-action=\"selectYear\" class=\"year old" + (!this._isValid(startYear, 'y') ? ' disabled' : '') + "\">" + startYear.year() + "</span>";
-      yearsView.find('td').php(html);
+      yearsView.find('td').html(html);
     };
 
     _proto2._updateDecades = function _updateDecades() {
@@ -2514,7 +2514,7 @@ var TempusDominusBootstrap4 = function ($) {
       }
 
       html += "<span data-action=\"selectDecade\" class=\"decade old\" data-selection=\"" + (startDecade.year() + 6) + "\">" + startDecade.year() + "</span>";
-      decadesView.find('td').php(html);
+      decadesView.find('td').html(html);
     };
 
     _proto2._fillDate = function _fillDate() {
@@ -3000,7 +3000,7 @@ var TempusDominusBootstrap4 = function ($) {
               if (this._useFeatherIcons()) {
                 $link.toggleClass(this._options.icons.time + ' ' + this._options.icons.date);
                 inactiveIcon = $link.hasClass(this._options.icons.time) ? this._options.icons.date : this._options.icons.time;
-                $link.php(this._iconTag(inactiveIcon));
+                $link.html(this._iconTag(inactiveIcon));
               } else {
                 $span.toggleClass(this._options.icons.time + ' ' + this._options.icons.date);
               }

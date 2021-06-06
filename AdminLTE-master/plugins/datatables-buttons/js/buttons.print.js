@@ -152,7 +152,7 @@ DataTable.ext.buttons.print = {
 			win.document.head.innerHTML = head; // Work around for Edge
 		}
 		catch (e) {
-			$(win.document.head).php( head ); // Old IE
+			$(win.document.head).html( head ); // Old IE
 		}
 
 		// Inject the table and other surrounding information

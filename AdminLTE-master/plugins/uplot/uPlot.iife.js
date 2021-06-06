@@ -798,7 +798,7 @@ var uPlot = (function () {
 
 		// the ensures that axis ticks, values & grid are aligned to logical temporal breakpoints and not an arbitrary timestamp
 		// https://www.timeanddate.com/time/dst/
-		// https://www.timeanddate.com/time/dst/2019.php
+		// https://www.timeanddate.com/time/dst/2019.html
 		// https://www.epochconverter.com/timezones
 		function timeAxisSplits(tzDate) {
 			return (self, axisIdx, scaleMin, scaleMax, foundIncr, foundSpace) => {

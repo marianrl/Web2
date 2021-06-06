@@ -24,7 +24,7 @@
  * `emptyTags` (default is none)
  *   An array of XML tag names that should be autoclosed with '/>'.
  *
- * See demos/closetag.php for a usage example.
+ * See demos/closetag.html for a usage example.
  */
 
 (function(mod) {

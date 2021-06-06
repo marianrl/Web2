@@ -151,7 +151,7 @@
   };
 
   CodeMirror.defineMode("php", function(config, parserConfig) {
-    var htmlMode = CodeMirror.getMode(config, (parserConfig && parserConfig.phpMode) || "text/html");
+    var htmlMode = CodeMirror.getMode(config, (parserConfig && parserConfig.htmlMode) || "text/html");
     var phpMode = CodeMirror.getMode(config, phpConfig);
 
     function dispatch(stream, state) {
@@ -160,7 +160,7 @@
       if (!isPHP) {
         if (stream.match(/^<\?\w*/)) {
           state.curMode = phpMode;
-          if (!state.php) state.php = CodeMirror.startState(phpMode, htmlMode.indent(state.php, "", ""))
+          if (!state.php) state.php = CodeMirror.startState(phpMode, htmlMode.indent(state.html, "", ""))
           state.curState = state.php;
           return "meta";
         }
@@ -183,7 +183,7 @@
         return style;
       } else if (isPHP && state.php.tokenize == null && stream.match("?>")) {
         state.curMode = htmlMode;
-        state.curState = state.php;
+        state.curState = state.html;
         if (!state.php.context.prev) state.php = null;
         return "meta";
       } else {
@@ -203,7 +203,7 @@
       },
 
       copyState: function(state) {
-        var html = state.php, htmlNew = CodeMirror.copyState(htmlMode, html),
+        var html = state.html, htmlNew = CodeMirror.copyState(htmlMode, html),
             php = state.php, phpNew = php && CodeMirror.copyState(phpMode, php), cur;
         if (state.curMode == htmlMode) cur = htmlNew;
         else cur = phpNew;
@@ -216,7 +216,7 @@
       indent: function(state, textAfter, line) {
         if ((state.curMode != phpMode && /^\s*<\//.test(textAfter)) ||
             (state.curMode == phpMode && /^\?>/.test(textAfter)))
-          return htmlMode.indent(state.php, textAfter, line);
+          return htmlMode.indent(state.html, textAfter, line);
         return state.curMode.indent(state.curState, textAfter, line);
       },
 

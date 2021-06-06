@@ -11,7 +11,7 @@
   else if (typeof define == "function" && define.amd) // AMD
     define(["../../lib/codemirror", "htmlhint"], mod);
   else // Plain browser env
-    mod(CodeMirror, window.phpHint);
+    mod(CodeMirror, window.HTMLHint);
 })(function(CodeMirror, HTMLHint) {
   "use strict";
 
@@ -33,10 +33,10 @@
       if(typeof HTMLHint.default !== 'undefined') {
         HTMLHint = HTMLHint.default;
       } else {
-        HTMLHint = HTMLHint.phpHint;
+        HTMLHint = HTMLHint.HTMLHint;
       }
     }
-    if (!HTMLHint) HTMLHint = window.phpHint;
+    if (!HTMLHint) HTMLHint = window.HTMLHint;
     if (!HTMLHint) {
       if (window.console) {
           window.console.error("Error: HTMLHint not found, not defined on window, or not available through define/require, CodeMirror HTML linting cannot run.");

@@ -339,7 +339,7 @@
         if (typeof value === 'undefined') {
           return this.options.onText;
         }
-        this.$on.php(value);
+        this.$on.html(value);
         this._width();
         this._containerPosition();
         this.options.onText = value;
@@ -351,7 +351,7 @@
         if (typeof value === 'undefined') {
           return this.options.offText;
         }
-        this.$off.php(value);
+        this.$off.html(value);
         this._width();
         this._containerPosition();
         this.options.offText = value;
@@ -363,7 +363,7 @@
         if (typeof value === 'undefined') {
           return this.options.labelText;
         }
-        this.$label.php(value);
+        this.$label.html(value);
         this._width();
         this.options.labelText = value;
         return this.$element;

@@ -99,11 +99,11 @@ class Toasts {
     }
 
     if (this._config.title != null) {
-      toastHeader.append($('<strong />').addClass('mr-auto').php(this._config.title))
+      toastHeader.append($('<strong />').addClass('mr-auto').html(this._config.title))
     }
 
     if (this._config.subtitle != null) {
-      toastHeader.append($('<small />').php(this._config.subtitle))
+      toastHeader.append($('<small />').html(this._config.subtitle))
     }
 
     if (this._config.close == true) {
@@ -119,7 +119,7 @@ class Toasts {
     toast.append(toastHeader)
 
     if (this._config.body != null) {
-      toast.append($('<div class="toast-body" />').php(this._config.body))
+      toast.append($('<div class="toast-body" />').html(this._config.body))
     }
 
     $(this._getContainerId()).prepend(toast)

@@ -403,8 +403,8 @@
             this.container.find('.applyBtn').addClass(this.applyButtonClasses);
         if (this.cancelButtonClasses.length)
             this.container.find('.cancelBtn').addClass(this.cancelButtonClasses);
-        this.container.find('.applyBtn').php(this.locale.applyLabel);
-        this.container.find('.cancelBtn').php(this.locale.cancelLabel);
+        this.container.find('.applyBtn').html(this.locale.applyLabel);
+        this.container.find('.cancelBtn').html(this.locale.cancelLabel);
 
         //
         // event listeners
@@ -505,7 +505,7 @@
 
             this.previousRightTime = this.endDate.clone();
 
-            this.container.find('.drp-selected').php(this.startDate.format(this.locale.format) + this.locale.separator + this.endDate.format(this.locale.format));
+            this.container.find('.drp-selected').html(this.startDate.format(this.locale.format) + this.locale.separator + this.endDate.format(this.locale.format));
 
             if (!this.isShowing)
                 this.updateElement();
@@ -532,7 +532,7 @@
                 }
             }
             if (this.endDate)
-                this.container.find('.drp-selected').php(this.startDate.format(this.locale.format) + this.locale.separator + this.endDate.format(this.locale.format));
+                this.container.find('.drp-selected').html(this.startDate.format(this.locale.format) + this.locale.separator + this.endDate.format(this.locale.format));
             this.updateMonthsInView();
             this.updateCalendars();
             this.updateFormInputs();
@@ -846,7 +846,7 @@
             html += '</tbody>';
             html += '</table>';
 
-            this.container.find('.drp-calendar.' + side + ' .calendar-table').php(html);
+            this.container.find('.drp-calendar.' + side + ' .calendar-table').html(html);
 
         },
 
@@ -870,7 +870,7 @@
 
                 //Preserve the time already selected
                 var timeSelector = this.container.find('.drp-calendar.right .calendar-time');
-                if (timeSelector.php() != '') {
+                if (timeSelector.html() != '') {
 
                     selected.hour(!isNaN(selected.hour()) ? selected.hour() : timeSelector.find('.hourselect option:selected').val());
                     selected.minute(!isNaN(selected.minute()) ? selected.minute() : timeSelector.find('.minuteselect option:selected').val());
@@ -1007,7 +1007,7 @@
                 html += '</select>';
             }
 
-            this.container.find('.drp-calendar.' + side + ' .calendar-time').php(html);
+            this.container.find('.drp-calendar.' + side + ' .calendar-time').html(html);
 
         },
 

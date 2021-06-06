@@ -192,10 +192,10 @@ class SidebarSearch {
     })
     const searchTitleElement = $('<div/>', {
       class: 'search-title'
-    }).php(name)
+    }).html(name)
     const searchPathElement = $('<div/>', {
       class: 'search-path'
-    }).php(path)
+    }).html(path)
 
     groupItemElement.append(searchTitleElement).append(searchPathElement)
 

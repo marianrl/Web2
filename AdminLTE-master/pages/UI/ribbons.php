@@ -3,17 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Timeline</title>
+  <title>AdminLTE 3 | UI Ribbons</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <!-- AdminLTE css -->
+  <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
-<!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -23,7 +22,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../../index.php" class="nav-link">Home</a>
+        <a href="../../index3.php" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -156,7 +155,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../../index.php" class="brand-link">
+    <a href="../../index3.php" class="brand-link">
       <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
@@ -212,7 +211,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../../index.php" class="nav-link">
+                <a href="../../index3.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v3</p>
                 </a>
@@ -369,13 +368,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../UI/timeline.php" class="nav-link active">
+                <a href="../UI/timeline.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Timeline</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../UI/ribbons.php" class="nav-link">
+                <a href="../UI/ribbons.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ribbons</p>
                 </a>
@@ -835,12 +834,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Timeline</h1>
+            <h1>Ribbons</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Timeline</li>
+              <li class="breadcrumb-item active">Ribbons</li>
             </ol>
           </div>
         </div>
@@ -850,114 +849,126 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-
-        <!-- Timelime example  -->
         <div class="row">
-          <div class="col-md-12">
-            <!-- The time line -->
-            <div class="timeline">
-              <!-- timeline time label -->
-              <div class="time-label">
-                <span class="bg-red">10 Feb. 2014</span>
+          <div class="col-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Ribbons</h3>
               </div>
-              <!-- /.timeline-label -->
-              <!-- timeline item -->
-              <div>
-                <i class="fas fa-envelope bg-blue"></i>
-                <div class="timeline-item">
-                  <span class="time"><i class="fas fa-clock"></i> 12:05</span>
-                  <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
-
-                  <div class="timeline-body">
-                    Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                    weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                    jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                    quora plaxo ideeli hulu weebly balihoo...
-                  </div>
-                  <div class="timeline-footer">
-                    <a class="btn btn-primary btn-sm">Read more</a>
-                    <a class="btn btn-danger btn-sm">Delete</a>
-                  </div>
-                </div>
-              </div>
-              <!-- END timeline item -->
-              <!-- timeline item -->
-              <div>
-                <i class="fas fa-user bg-green"></i>
-                <div class="timeline-item">
-                  <span class="time"><i class="fas fa-clock"></i> 5 mins ago</span>
-                  <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
-                </div>
-              </div>
-              <!-- END timeline item -->
-              <!-- timeline item -->
-              <div>
-                <i class="fas fa-comments bg-yellow"></i>
-                <div class="timeline-item">
-                  <span class="time"><i class="fas fa-clock"></i> 27 mins ago</span>
-                  <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-                  <div class="timeline-body">
-                    Take me to your leader!
-                    Switzerland is small and neutral!
-                    We are more like Germany, ambitious and misunderstood!
-                  </div>
-                  <div class="timeline-footer">
-                    <a class="btn btn-warning btn-sm">View comment</a>
-                  </div>
-                </div>
-              </div>
-              <!-- END timeline item -->
-              <!-- timeline time label -->
-              <div class="time-label">
-                <span class="bg-green">3 Jan. 2014</span>
-              </div>
-              <!-- /.timeline-label -->
-              <!-- timeline item -->
-              <div>
-                <i class="fa fa-camera bg-purple"></i>
-                <div class="timeline-item">
-                  <span class="time"><i class="fas fa-clock"></i> 2 days ago</span>
-                  <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-                  <div class="timeline-body">
-                    <img src="https://placehold.it/150x100" alt="...">
-                    <img src="https://placehold.it/150x100" alt="...">
-                    <img src="https://placehold.it/150x100" alt="...">
-                    <img src="https://placehold.it/150x100" alt="...">
-                    <img src="https://placehold.it/150x100" alt="...">
-                  </div>
-                </div>
-              </div>
-              <!-- END timeline item -->
-              <!-- timeline item -->
-              <div>
-                <i class="fas fa-video bg-maroon"></i>
-
-                <div class="timeline-item">
-                  <span class="time"><i class="fas fa-clock"></i> 5 days ago</span>
-
-                  <h3 class="timeline-header"><a href="#">Mr. Doe</a> shared a video</h3>
-
-                  <div class="timeline-body">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tMWkeBIohBs" allowfullscreen></iframe>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="position-relative p-3 bg-gray" style="height: 180px">
+                      <div class="ribbon-wrapper">
+                        <div class="ribbon bg-primary">
+                          Ribbon
+                        </div>
+                      </div>
+                      Ribbon Default <br />
+                      <small>.ribbon-wrapper.ribbon-lg .ribbon</small>
                     </div>
                   </div>
-                  <div class="timeline-footer">
-                    <a href="#" class="btn btn-sm bg-maroon">See comments</a>
+                  <div class="col-sm-4">
+                    <div class="position-relative p-3 bg-gray" style="height: 180px">
+                      <div class="ribbon-wrapper ribbon-lg">
+                        <div class="ribbon bg-info">
+                          Ribbon Large
+                        </div>
+                      </div>
+                      Ribbon Large <br />
+                      <small>.ribbon-wrapper.ribbon-lg .ribbon</small>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="position-relative p-3 bg-gray" style="height: 180px">
+                      <div class="ribbon-wrapper ribbon-xl">
+                        <div class="ribbon bg-secondary">
+                          Ribbon Extra Large
+                        </div>
+                      </div>
+                      Ribbon Extra Large <br />
+                      <small>.ribbon-wrapper.ribbon-xl .ribbon</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-sm-4">
+                    <div class="position-relative p-3 bg-gray" style="height: 180px">
+                      <div class="ribbon-wrapper ribbon-lg">
+                        <div class="ribbon bg-success text-lg">
+                          Ribbon
+                        </div>
+                      </div>
+                      Ribbon Large <br /> with Large Text <br />
+                      <small>.ribbon-wrapper.ribbon-lg .ribbon.text-lg</small>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="position-relative p-3 bg-gray" style="height: 180px">
+                      <div class="ribbon-wrapper ribbon-xl">
+                        <div class="ribbon bg-warning text-lg">
+                          Ribbon
+                        </div>
+                      </div>
+                      Ribbon Extra Large <br /> with Large Text <br />
+                      <small>.ribbon-wrapper.ribbon-xl .ribbon.text-lg</small>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="position-relative p-3 bg-gray" style="height: 180px">
+                      <div class="ribbon-wrapper ribbon-xl">
+                        <div class="ribbon bg-danger text-xl">
+                          Ribbon
+                        </div>
+                      </div>
+                      Ribbon Extra Large <br /> with Extra Large Text <br />
+                      <small>.ribbon-wrapper.ribbon-xl .ribbon.text-xl</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-sm-4">
+                    <div class="position-relative">
+                      <img src="../../dist/img/photo1.png" alt="Photo 1" class="img-fluid">
+                      <div class="ribbon-wrapper ribbon-lg">
+                        <div class="ribbon bg-success text-lg">
+                          Ribbon
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="position-relative">
+                      <img src="../../dist/img/photo2.png" alt="Photo 2" class="img-fluid">
+                      <div class="ribbon-wrapper ribbon-xl">
+                        <div class="ribbon bg-warning text-lg">
+                          Ribbon
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="position-relative" style="min-height: 180px;">
+                      <img src="../../dist/img/photo3.jpg" alt="Photo 3" class="img-fluid">
+                      <div class="ribbon-wrapper ribbon-xl">
+                        <div class="ribbon bg-danger text-xl">
+                          Ribbon
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- END timeline item -->
-              <div>
-                <i class="fas fa-clock bg-gray"></i>
-              </div>
+              <!-- /.card-body -->
             </div>
+            <!-- /.card -->
           </div>
           <!-- /.col -->
         </div>
+        <!-- /.row -->
       </div>
-      <!-- /.timeline -->
-
+      <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
@@ -984,7 +995,78 @@
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
+<!-- Ion Slider -->
+<script src="../../plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<!-- Bootstrap slider -->
+<script src="../../plugins/bootstrap-slider/bootstrap-slider.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    /* BOOTSTRAP SLIDER */
+    $('.slider').bootstrapSlider()
+
+    /* ION SLIDER */
+    $('#range_1').ionRangeSlider({
+      min     : 0,
+      max     : 5000,
+      from    : 1000,
+      to      : 4000,
+      type    : 'double',
+      step    : 1,
+      prefix  : '$',
+      prettify: false,
+      hasGrid : true
+    })
+    $('#range_2').ionRangeSlider()
+
+    $('#range_5').ionRangeSlider({
+      min     : 0,
+      max     : 10,
+      type    : 'single',
+      step    : 0.1,
+      postfix : ' mm',
+      prettify: false,
+      hasGrid : true
+    })
+    $('#range_6').ionRangeSlider({
+      min     : -50,
+      max     : 50,
+      from    : 0,
+      type    : 'single',
+      step    : 1,
+      postfix : '°',
+      prettify: false,
+      hasGrid : true
+    })
+
+    $('#range_4').ionRangeSlider({
+      type      : 'single',
+      step      : 100,
+      postfix   : ' light years',
+      from      : 55000,
+      hideMinMax: true,
+      hideFromTo: false
+    })
+    $('#range_3').ionRangeSlider({
+      type    : 'double',
+      postfix : ' miles',
+      step    : 10000,
+      from    : 25000000,
+      to      : 35000000,
+      onChange: function (obj) {
+        var t = ''
+        for (var prop in obj) {
+          t += prop + ': ' + obj[prop] + '\r\n'
+        }
+        $('#result').php(t)
+      },
+      onLoad  : function (obj) {
+        //
+      }
+    })
+  })
+</script>
 </body>
 </html>

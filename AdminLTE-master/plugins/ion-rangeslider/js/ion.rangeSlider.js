@@ -3,11 +3,11 @@
 // © Denis Ineshin, 2019
 // https://github.com/IonDen
 //
-// Project page:    http://ionden.com/a/plugins/ion.rangeSlider/en.php
+// Project page:    http://ionden.com/a/plugins/ion.rangeSlider/en.html
 // GitHub page:     https://github.com/IonDen/ion.rangeSlider
 //
 // Released under MIT licence:
-// http://ionden.com/a/plugins/licence-en.php
+// http://ionden.com/a/plugins/licence-en.html
 // =====================================================================================================================
 
 ;(function(factory) {
@@ -511,7 +511,7 @@
             this.$cache.cont = this.$cache.input.prev();
             this.result.slider = this.$cache.cont;
 
-            this.$cache.cont.php(base_html);
+            this.$cache.cont.html(base_html);
             this.$cache.rs = this.$cache.cont.find(".irs");
             this.$cache.min = this.$cache.cont.find(".irs-min");
             this.$cache.max = this.$cache.cont.find(".irs-max");
@@ -950,8 +950,8 @@
             }
 
             if (this.options.values.length) {
-                this.$cache.min.php(this.decorate(this.options.p_values[this.options.min]));
-                this.$cache.max.php(this.decorate(this.options.p_values[this.options.max]));
+                this.$cache.min.html(this.decorate(this.options.p_values[this.options.min]));
+                this.$cache.max.html(this.decorate(this.options.p_values[this.options.max]));
             } else {
                 var min_pretty = this._prettify(this.options.min);
                 var max_pretty = this._prettify(this.options.max);
@@ -959,8 +959,8 @@
                 this.result.min_pretty = min_pretty;
                 this.result.max_pretty = max_pretty;
 
-                this.$cache.min.php(this.decorate(min_pretty, this.options.min));
-                this.$cache.max.php(this.decorate(max_pretty, this.options.max));
+                this.$cache.min.html(this.decorate(min_pretty, this.options.min));
+                this.$cache.max.html(this.decorate(max_pretty, this.options.max));
             }
 
             this.labels.w_min = this.$cache.min.outerWidth(false);
@@ -1470,12 +1470,12 @@
 
                 if (values_num) {
                     text_single = this.decorate(p_values[this.result.from]);
-                    this.$cache.single.php(text_single);
+                    this.$cache.single.html(text_single);
                 } else {
                     from_pretty = this._prettify(this.result.from);
 
                     text_single = this.decorate(from_pretty, this.result.from);
-                    this.$cache.single.php(text_single);
+                    this.$cache.single.html(text_single);
                 }
 
                 this.calcLabels();
@@ -1506,9 +1506,9 @@
                     text_from = this.decorate(p_values[this.result.from]);
                     text_to = this.decorate(p_values[this.result.to]);
 
-                    this.$cache.single.php(text_single);
-                    this.$cache.from.php(text_from);
-                    this.$cache.to.php(text_to);
+                    this.$cache.single.html(text_single);
+                    this.$cache.from.html(text_from);
+                    this.$cache.to.html(text_to);
 
                 } else {
                     from_pretty = this._prettify(this.result.from);
@@ -1524,9 +1524,9 @@
                     text_from = this.decorate(from_pretty, this.result.from);
                     text_to = this.decorate(to_pretty, this.result.to);
 
-                    this.$cache.single.php(text_single);
-                    this.$cache.from.php(text_from);
-                    this.$cache.to.php(text_to);
+                    this.$cache.single.html(text_single);
+                    this.$cache.from.html(text_from);
+                    this.$cache.to.html(text_to);
 
                 }
 
@@ -2252,7 +2252,7 @@
 
 
             this.$cache.cont.addClass("irs-with-grid");
-            this.$cache.grid.php(html);
+            this.$cache.grid.html(html);
             this.cacheGridLabels();
         },
 

@@ -177,8 +177,8 @@
           context: null,
           lookupVariables: true, // Is unknown variables considered an error
           localStates: [{
-            mode: modes.php,
-            state: CodeMirror.startState(modes.php)
+            mode: modes.html,
+            state: CodeMirror.startState(modes.html)
           }]
         };
       },
@@ -491,7 +491,7 @@
               if (state.context && state.context.tag == tagName && stream.current() == "kind" && (match = stream.match(/^="([^"]+)/, false))) {
                 var kind = match[1];
                 state.context.kind = kind;
-                var mode = modes[kind] || modes.php;
+                var mode = modes[kind] || modes.html;
                 var localState = last(state.localStates);
                 if (localState.mode.indent) {
                   state.indent += localState.mode.indent(localState.state, "", "");

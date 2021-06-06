@@ -85,7 +85,7 @@
         self.$map = $("." + self.options.map.cssClass, self.container);
 
         // Save initial HTML content (used by destroy method)
-        self.initialMapHTMLContent = self.$map.php();
+        self.initialMapHTMLContent = self.$map.html();
 
         // The tooltip jQuery object
         self.$tooltip = {};
@@ -296,14 +296,14 @@
             self.$map.empty();
 
             // Replace initial HTML content
-            self.$map.php(self.initialMapHTMLContent);
+            self.$map.html(self.initialMapHTMLContent);
 
             // Empty legend containers and replace initial HTML content
             $.each(self.legends, function(legendType) {
                 $.each(self.legends[legendType], function(legendIndex) {
                     var legend = self.legends[legendType][legendIndex];
                     legend.container.empty();
-                    legend.container.php(legend.initialHTMLContent);
+                    legend.container.html(legend.initialHTMLContent);
                 });
             });
 
@@ -612,7 +612,7 @@
                 if (fnZoomButtons[type] === undefined) throw new Error("Unknown zoom button '" + type + "'");
                 // Create div with classes, contents and title (for tooltip)
                 var $button = $("<div>").addClass(opt.cssClass)
-                    .php(opt.content)
+                    .html(opt.content)
                     .attr("title", opt.title);
                 // Assign click event
                 $button.on("click." + pluginName, fnZoomButtons[type]);
@@ -1690,7 +1690,7 @@
             $legend = $("." + legendOptions.cssClass, self.$container);
 
             // Save content for later
-            var initialHTMLContent = $legend.php();
+            var initialHTMLContent = $legend.html();
             $legend.empty();
 
             legendPaper = new Raphael($legend.get(0));
@@ -2071,7 +2071,7 @@
                 if (elem.options.tooltip.cssClass !== undefined) {
                     self.$tooltip.addClass(elem.options.tooltip.cssClass);
                 }
-                self.$tooltip.php(content).css("display", "block");
+                self.$tooltip.html(content).css("display", "block");
             }
 
             // workaround for older version of Raphael

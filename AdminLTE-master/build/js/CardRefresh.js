@@ -68,10 +68,10 @@ class CardRefresh {
     $.get(this._settings.source, this._settings.params, response => {
       if (this._settings.loadInContent) {
         if (this._settings.sourceSelector !== '') {
-          response = $(response).find(this._settings.sourceSelector).php()
+          response = $(response).find(this._settings.sourceSelector).html()
         }
 
-        this._parent.find(this._settings.content).php(response)
+        this._parent.find(this._settings.content).html(response)
       }
 
       this._settings.onLoadDone.call($(this), response)

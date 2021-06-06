@@ -59,7 +59,7 @@ var xmlConfig = {
 CodeMirror.defineMode("xml", function(editorConf, config_) {
   var indentUnit = editorConf.indentUnit
   var config = {}
-  var defaults = config_.phpMode ? htmlConfig : xmlConfig
+  var defaults = config_.htmlMode ? htmlConfig : xmlConfig
   for (var prop in defaults) config[prop] = defaults[prop]
   for (var prop in config_) config[prop] = config_[prop]
 
@@ -384,8 +384,8 @@ CodeMirror.defineMode("xml", function(editorConf, config_) {
     blockCommentStart: "<!--",
     blockCommentEnd: "-->",
 
-    configuration: config.phpMode ? "html" : "xml",
-    helperType: config.phpMode ? "html" : "xml",
+    configuration: config.htmlMode ? "html" : "xml",
+    helperType: config.htmlMode ? "html" : "xml",
 
     skipAttribute: function(state) {
       if (state.state == attrValueState)

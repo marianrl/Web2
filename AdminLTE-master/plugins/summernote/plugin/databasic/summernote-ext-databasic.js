@@ -169,7 +169,7 @@
     };
 
     self.setContent = function($node) {
-      $node.php('<p contenteditable="false">' + self.icon + ' ' + lang.databasic.name + ': ' +
+      $node.html('<p contenteditable="false">' + self.icon + ' ' + lang.databasic.name + ': ' +
         $node.attr('data-test') + '</p>');
     };
 

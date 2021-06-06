@@ -86,9 +86,9 @@
       tags.script.unshift(["type", configScript[i].matches, configScript[i].mode])
 
     function html(stream, state) {
-      var style = htmlMode.token(stream, state.phpState), tag = /\btag\b/.test(style), tagName
+      var style = htmlMode.token(stream, state.htmlState), tag = /\btag\b/.test(style), tagName
       if (tag && !/[<>\s\/]/.test(stream.current()) &&
-          (tagName = state.phpState.tagName && state.phpState.tagName.toLowerCase()) &&
+          (tagName = state.htmlState.tagName && state.htmlState.tagName.toLowerCase()) &&
           tags.hasOwnProperty(tagName)) {
         state.inTag = tagName + " "
       } else if (state.inTag && tag && />$/.test(stream.current())) {
@@ -106,7 +106,7 @@
           return maybeBackup(stream, endTag, state.localMode.token(stream, state.localState));
         };
         state.localMode = mode;
-        state.localState = CodeMirror.startState(mode, htmlMode.indent(state.phpState, "", ""));
+        state.localState = CodeMirror.startState(mode, htmlMode.indent(state.htmlState, "", ""));
       } else if (state.inTag) {
         state.inTag += stream.current()
         if (stream.eol()) state.inTag += " "
@@ -127,7 +127,7 @@
         }
         return {token: state.token, inTag: state.inTag,
                 localMode: state.localMode, localState: local,
-                htmlState: CodeMirror.copyState(htmlMode, state.phpState)};
+                htmlState: CodeMirror.copyState(htmlMode, state.htmlState)};
       },
 
       token: function (stream, state) {
@@ -136,7 +136,7 @@
 
       indent: function (state, textAfter, line) {
         if (!state.localMode || /^\s*<\//.test(textAfter))
-          return htmlMode.indent(state.phpState, textAfter, line);
+          return htmlMode.indent(state.htmlState, textAfter, line);
         else if (state.localMode.indent)
           return state.localMode.indent(state.localState, textAfter, line);
         else
@@ -144,7 +144,7 @@
       },
 
       innerMode: function (state) {
-        return {state: state.localState || state.phpState, mode: state.localMode || htmlMode};
+        return {state: state.localState || state.htmlState, mode: state.localMode || htmlMode};
       }
     };
   }, "xml", "javascript", "css");

@@ -78,10 +78,10 @@
       $__default['default'].get(this._settings.source, this._settings.params, function (response) {
         if (_this._settings.loadInContent) {
           if (_this._settings.sourceSelector !== '') {
-            response = $__default['default'](response).find(_this._settings.sourceSelector).php();
+            response = $__default['default'](response).find(_this._settings.sourceSelector).html();
           }
 
-          _this._parent.find(_this._settings.content).php(response);
+          _this._parent.find(_this._settings.content).html(response);
         }
 
         _this._settings.onLoadDone.call($__default['default'](_this), response);
@@ -2242,10 +2242,10 @@
       });
       var searchTitleElement = $__default['default']('<div/>', {
         class: 'search-title'
-      }).php(name);
+      }).html(name);
       var searchPathElement = $__default['default']('<div/>', {
         class: 'search-path'
-      }).php(path);
+      }).html(path);
       groupItemElement.append(searchTitleElement).append(searchPathElement);
       return groupItemElement;
     };
@@ -2545,11 +2545,11 @@
       }
 
       if (this._config.title != null) {
-        toastHeader.append($__default['default']('<strong />').addClass('mr-auto').php(this._config.title));
+        toastHeader.append($__default['default']('<strong />').addClass('mr-auto').html(this._config.title));
       }
 
       if (this._config.subtitle != null) {
-        toastHeader.append($__default['default']('<small />').php(this._config.subtitle));
+        toastHeader.append($__default['default']('<small />').html(this._config.subtitle));
       }
 
       if (this._config.close == true) {
@@ -2565,7 +2565,7 @@
       toast.append(toastHeader);
 
       if (this._config.body != null) {
-        toast.append($__default['default']('<div class="toast-body" />').php(this._config.body));
+        toast.append($__default['default']('<div class="toast-body" />').html(this._config.body));
       }
 
       $__default['default'](this._getContainerId()).prepend(toast);

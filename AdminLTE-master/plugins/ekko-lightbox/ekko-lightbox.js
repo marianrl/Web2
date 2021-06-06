@@ -394,13 +394,13 @@ var Lightbox = (function ($) {
 				this._titleIsShown = false;
 				if (title || this._config.alwaysShowClose) {
 					this._titleIsShown = true;
-					this._$modalHeader.css('display', '').find('.modal-title').php(title || "&nbsp;");
+					this._$modalHeader.css('display', '').find('.modal-title').html(title || "&nbsp;");
 				} else this._$modalHeader.css('display', 'none');
 
 				this._footerIsShown = false;
 				if (caption) {
 					this._footerIsShown = true;
-					this._$modalFooter.css('display', '').php(caption);
+					this._$modalFooter.css('display', '').html(caption);
 				} else this._$modalFooter.css('display', 'none');
 
 				return this;
@@ -428,7 +428,7 @@ var Lightbox = (function ($) {
 				var width = this._$element.data('width') || 612;
 				var height = width + 80;
 				id = id.substr(-1) !== '/' ? id + '/' : id; // ensure id has trailing slash
-				$containerForElement.php('<iframe width="' + width + '" height="' + height + '" src="' + id + 'embed/" frameborder="0" allowfullscreen></iframe>');
+				$containerForElement.html('<iframe width="' + width + '" height="' + height + '" src="' + id + 'embed/" frameborder="0" allowfullscreen></iframe>');
 				this._resize(width, height);
 				this._config.onContentLoaded.call(this);
 				if (this._$modalArrows) //hide the arrows when showing video
@@ -441,7 +441,7 @@ var Lightbox = (function ($) {
 			value: function _showVideoIframe(url, width, height, $containerForElement) {
 				// should be used for videos only. for remote content use loadRemoteContent (data-type=url)
 				height = height || width; // default to square
-				$containerForElement.php('<div class="embed-responsive embed-responsive-16by9"><iframe width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe></div>');
+				$containerForElement.html('<div class="embed-responsive embed-responsive-16by9"><iframe width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe></div>');
 				this._resize(width, height);
 				this._config.onContentLoaded.call(this);
 				if (this._$modalArrows) this._$modalArrows.css('display', 'none'); //hide the arrows when showing video
@@ -454,7 +454,7 @@ var Lightbox = (function ($) {
 				// should be used for videos only. for remote content use loadRemoteContent (data-type=url)
 				var width = this._$element.data('width') || 560;
 				var height = this._$element.data('height') || width / (560 / 315);
-				$containerForElement.php('<div class="embed-responsive embed-responsive-16by9"><video width="' + width + '" height="' + height + '" src="' + url + '" preload="auto" autoplay controls class="embed-responsive-item"></video></div>');
+				$containerForElement.html('<div class="embed-responsive embed-responsive-16by9"><video width="' + width + '" height="' + height + '" src="' + url + '" preload="auto" autoplay controls class="embed-responsive-item"></video></div>');
 				this._resize(width, height);
 				this._config.onContentLoaded.call(this);
 				if (this._$modalArrows) this._$modalArrows.css('display', 'none'); //hide the arrows when showing video
@@ -479,7 +479,7 @@ var Lightbox = (function ($) {
 						return _this3._$element.trigger('loaded.bs.modal');l;
 					}));
 				} else {
-					$containerForElement.php('<iframe src="' + url + '" frameborder="0" allowfullscreen></iframe>');
+					$containerForElement.html('<iframe src="' + url + '" frameborder="0" allowfullscreen></iframe>');
 					this._config.onContentLoaded.call(this);
 				}
 
@@ -506,7 +506,7 @@ var Lightbox = (function ($) {
 			key: '_error',
 			value: function _error(message) {
 				console.error(message);
-				this._containerToUse().php(message);
+				this._containerToUse().html(message);
 				this._resize(300, 300);
 				return this;
 			}
@@ -550,7 +550,7 @@ var Lightbox = (function ($) {
 							// backward compatibility for bootstrap v3
 							image.css('width', '100%');
 
-							$containerForImage.php(image);
+							$containerForImage.html(image);
 							if (_this4._$modalArrows) _this4._$modalArrows.css('display', ''); // remove display to default to css property
 
 							_this4._resize(img.width, img.height);
