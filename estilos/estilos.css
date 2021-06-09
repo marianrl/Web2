@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap");
 
-*{
-  font-family: 'roboto', sans-serif;
+* {
+  font-family: "roboto", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -91,7 +91,7 @@ h1 {
   height: 100%;
 }
 .container fluid {
-  display: block ;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -255,7 +255,6 @@ h2 {
   position: relative;
   width: 250px;
   background: #fff;
-  
 }
 .cntr {
   text-align: center;
@@ -265,19 +264,19 @@ h3 {
   line-height: 1.5em;
 }
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 div .btn-group {
-  width: 50%; 
+  width: 50%;
   margin: 0 auto;
   text-align: center;
   align-self: center;
   position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.btn-group > .btn{
+.btn-group > .btn {
   position: relative;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -295,7 +294,9 @@ div .btn-group {
   z-index: 1;
 }
 
-.btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active,
 .btn-group-vertical > .btn:focus,
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > .btn.active {
@@ -317,12 +318,14 @@ div .btn-group {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split,
+.btn-group-sm > .btn + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split,
+.btn-group-lg > .btn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -382,11 +385,13 @@ div .btn-group {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-group-vertical .btn.btn-flat:first-of-type, .btn-group-vertical .btn.btn-flat:last-of-type {
+.btn-group-vertical .btn.btn-flat:first-of-type,
+.btn-group-vertical .btn.btn-flat:last-of-type {
   border-radius: 0;
 }
 
-.btn-group, .btn-group-vertica{
+.btn-group,
+.btn-group-vertica {
   display: inline-block;
   align-self: center;
 }
@@ -414,5 +419,92 @@ div .btn-group {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+/*    */
+
+.card.card-tabs .card-tools {
+  margin: .3rem .5rem;
+}
+.card.card-outline-tabs .card-tools {
+  margin: .5rem .5rem .3rem;
+}
+.card-header > .card-tools {
+  float: right;
+  margin-right: -0.625rem;
+}
+
+.card-header > .card-tools .input-group,
+.card-header > .card-tools .nav,
+.card-header > .card-tools .pagination {
+  margin-bottom: -0.3rem;
+  margin-top: -0.3rem;
+}
+
+.card-header > .card-tools [data-toggle="tooltip"] {
+  position: relative;
+}
+.post .user-block {
+  margin-bottom: 15px;
+  width: 100%;
+}
+.user-block {
+  float: left;
+}
+
+.user-block img {
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.user-block .username,
+.user-block .description,
+.user-block .comment {
+  display: block;
+  margin-left: 50px;
+}
+
+.user-block .username {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: -1px;
+}
+
+.user-block .description {
+  color: #6c757d;
+  font-size: 13px;
+  margin-top: -3px;
+}
+
+.user-block.user-block-sm img {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.user-block.user-block-sm .username,
+.user-block.user-block-sm .description,
+.user-block.user-block-sm .comment {
+  margin-left: 40px;
+}
+
+.user-block.user-block-sm .username {
+  font-size: 14px;
+}
+
+.card {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
 }

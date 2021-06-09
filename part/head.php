@@ -1,4 +1,6 @@
-
+<?php
+include_once("config/config.php");
+?>
 <!doctype html>
 <html lang="es">
 

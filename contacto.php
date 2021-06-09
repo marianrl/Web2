@@ -1,12 +1,6 @@
 <?php
-
-    require_once("part/head.php");
-
-?>
-
-<?php
-
-    require_once("part/header.php");
+    require_once(DIRE_BASE."part/head.php");
+    require_once(DIRE_BASE."part/header.php");
 
 ?>
 
@@ -75,23 +69,15 @@
                     </div>
 
                 </fieldset>
-
-
-
-
             </form>
-
         </div>
     </section>
 </main>
 
 
 <?php
-        require_once('part/footer.php');
-    ?>
-
-<?php
-        require_once('part/java.php');
+        require_once(DIRE_BASE.'part/footer.php');
+        require_once(DIRE_BASE.'part/java.php');
     ?>
 </body>
 

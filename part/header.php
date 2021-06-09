@@ -1,7 +1,6 @@
 
 <?php
 require_once('helpers/string.php')
-
 ?>
 <header id="_top">
 

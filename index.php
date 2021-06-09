@@ -1,12 +1,13 @@
 <?php
-require_once("part/head.php");
+include_once("config/config.php");
+require_once(DIRE_BASE."part/head.php");
 ?>
 
 <body>
 
     <?php
 
-        require_once("part/header.php");
+        require_once(DIRE_BASE."part/header.php");
 
     ?>
     <main>
@@ -16,12 +17,12 @@ require_once("part/head.php");
             <div class="container seccion">
                 <div class="col-lg-12">
                     <?php
-                            require_once("part/header.php");
+                            require_once(DIRE_BASE."part/header.php");
                     ?>
                 </div>
             </div>
             <?php
-                require("part/carrusel_index.php");
+                require(DIRE_BASE."part/carrusel_index.php");
                 ?>
             <div class="container col-lg-6 col-sm-5 col-md-6">
                 <p><span>Bienvenidos a Teckel's bakery, nos especializamos en pastelería clásica, todos nuestros
@@ -32,7 +33,7 @@ require_once("part/head.php");
             </div>
 
             <?php
-                require("part/carrusel_index.php");
+                require(DIRE_BASE."part/carrusel_index.php");
                 ?>
 
             <div class="container col-lg-6 col-sm-5 col-md-6">
@@ -45,11 +46,8 @@ require_once("part/head.php");
     </main>
 
     <?php
-        require_once("part/footer.php");
-    ?>
-
-    <?php
-        require_once("part/java.php");
+        require_once(DIRE_BASE."part/footer.php");
+        require_once(DIRE_BASE."part/java.php");
     ?>
 </body>
 
