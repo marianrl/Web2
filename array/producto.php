@@ -36,6 +36,38 @@ $productos = array(
             'imagen' => 'torta10.jpg',
             'descripcion' => "Pan dulce, con frutos secos y fruta abrillantada o con chips de chocolate",
             'categoria' => 4
+        ),
+        '5'=> array(
+            'id' => 5,
+            'nombre' => "Cookies navideños",
+            'disponibilidad' => FALSE,
+            'imagen' => 'cookies1.jpg',
+            'descripcion' => "Cookies de limon con glaseado navideño",
+            'categoria' => 2
+        ),
+        '6'=> array(
+            'id' => 6,
+            'nombre' => "Cookies con chips",
+            'disponibilidad' => TRUE,
+            'imagen' => 'cookies2.jpg',
+            'descripcion' => "Cookies con chips de chocolates",
+            'categoria' => 2
+        ),
+        '7'=> array(
+            'id' => 7,
+            'nombre' => "Mix de tortas",
+            'disponibilidad' => TRUE,
+            'imagen' => 'mix1.jpg',
+            'descripcion' => "Variedad de mini tortas de 4 gustos iguales o distintos",
+            'categoria' => 3
+        ),
+        '8'=> array(
+            'id' => 8,
+            'nombre' => "Mix de tortas y galletitas",
+            'disponibilidad' => TRUE,
+            'imagen' => 'mix2.jpg',
+            'descripcion' => "Variedad de mini tortas y galletitas",
+            'categoria' => 3
         )
         );
 

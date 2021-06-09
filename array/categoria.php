@@ -8,12 +8,12 @@ $categoria = array(
 
         '2'=> array(
             'id' => 2,
-            'categoria' => "Budines"
+            'categoria' => "Cookies"
         ),
 
         '3'=> array(
             'id' => 3,
-            'categoria' => "Cookies"
+            'categoria' => "Surtido"
         ),
 
         '4'=> array(
