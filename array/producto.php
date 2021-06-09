@@ -3,7 +3,7 @@
 $productos = array(
         '1' => array(
                 'id' => 1,
-                'nombre' => "Tarta de Frutilla",
+                'nombre' => "Torta Personalizada",
                 'disponibilidad' => TRUE,
                 'imagen' => 'torta9.jpg',
                 'descripcion' => "Tarta de Frutilla rellena con crema pastelera, decorada con crema chantilly",
@@ -39,7 +39,7 @@ $productos = array(
         ),
         '5'=> array(
             'id' => 5,
-            'nombre' => "Cookies navideños",
+            'nombre' => "Cookies navideñas",
             'disponibilidad' => FALSE,
             'imagen' => 'cookies1.jpg',
             'descripcion' => "Cookies de limon con glaseado navideño",

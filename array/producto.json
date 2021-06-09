@@ -1,1 +1,15 @@
-{"1":{"id":1,"nombre":"Tarta de Frutilla","disponibilidad":true,"imagen":"torta9.jpg","descripcion":"Tarta de Frutilla rellena con crema pastelera, decorada con crema chantilly","categoria":1},"2":{"id":2,"nombre":"Lemon Pie","disponibilidad":true,"imagen":"torta7.jpg","descripcion":"Cl\u00e1sica torta rellena con una suave crema de lim\u00f3n decorada con merengue italiano","categoria":1},"3":{"id":3,"nombre":"Cannoli","disponibilidad":true,"imagen":"torta8.jpg","descripcion":"Cannoli, podes pedir tu relleno de crema cl\u00e1sica de ricotta o crema pastelera","categoria":4},"4":{"id":4,"nombre":"Pan dulces","disponibilidad":false,"imagen":"torta10.jpg","descripcion":"Pan dulce, con frutos secos y fruta abrillantada o con chips de chocolate","categoria":4},"5":{"id":5,"nombre":"Cookies navide\u00f1os","disponibilidad":false,"imagen":"cookies1.jpg","descripcion":"Cookies de limon con glaseado navide\u00f1o","categoria":2},"6":{"id":6,"nombre":"Cookies con chips","disponibilidad":true,"imagen":"cookies2.jpg","descripcion":"Cookies con chips de chocolates","categoria":2},"7":{"id":7,"nombre":"Mix de tortas","disponibilidad":true,"imagen":"mix1.jpg","descripcion":"Variedad de mini tortas de 4 gustos iguales o distintos","categoria":3},"8":{"id":8,"nombre":"Mix de tortas y galletitas","disponibilidad":true,"imagen":"mix2.jpg","descripcion":"Variedad de mini tortas y galletitas","categoria":3}}
+{"1":{"id":1,"nombre":"Torta Personalizada","disponibilidad":true,"imagen":"torta9.jpg",
+    "descripcion":"Torta personalizada de 2.5kg cubierta con Buttercream",
+    "categoria":1},"2":{"id":2,"nombre":"Lemon Pie","disponibilidad":true,"imagen":"torta7.jpg",
+     "descripcion":"Cl\u00e1sica torta rellena con una suave crema de lim\u00f3n decorada con merengue italiano",
+    "categoria":1},"3":{"id":3,"nombre":"Cannoli","disponibilidad":true,"imagen":"torta8.jpg",
+     "descripcion":"Cannoli, podes pedir tu relleno de crema cl\u00e1sica de ricotta o crema pastelera",
+    "categoria":4},"4":{"id":4,"nombre":"Pan dulces","disponibilidad":false,"imagen":"torta10.jpg",
+    "descripcion":"Pan dulce, con frutos secos y fruta abrillantada o con chips de chocolate",
+    "categoria":4},"5":{"id":5,"nombre":"Cookies navide\u00f1as","disponibilidad":false,
+    "imagen":"cookies1.jpg","descripcion":"Cookies de limón con glaseado navide\u00f1o",
+    "categoria":2},"6":{"id":6,"nombre":"Cookies con chips de chocolate","disponibilidad":true,"imagen":"cookies2.jpg",
+     "descripcion":"Cookies con chips de chocolates","categoria":2},"7":{"id":7,"nombre":"Mix de Mini tortas",
+    "disponibilidad":true,"imagen":"mix1.jpg","descripcion":"Variedad de 4 mini tortas a elección",
+    "categoria":3},"8":{"id":8,"nombre":"Box desayuno/Merienda",
+    "disponibilidad":true,"imagen":"mix2.jpg","descripcion":"Contiene 3 alfajores, 2 brownies, 2 porciones de budín de limón, 1 muffin de frutos rojos, 1 mini torta a elección","categoria":3}}
