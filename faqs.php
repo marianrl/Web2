@@ -1,14 +1,8 @@
 <?php
 include_once("config/config.php");
 require_once(DIRE_BASE."part/head.php");
+require_once(DIRE_BASE."part/header.php");
 ?>
-
-<body>
-    <?php
-
-        require_once(DIRE_BASE."part/header.php");
-
-    ?>
 
     <main>
         <section class="container">

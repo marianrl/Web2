@@ -1,15 +1,7 @@
 <?php
-
 require_once("part/head.php");
-
+require_once("part/header.php");
 ?>
-
-<body>
-    <?php
-
-        require_once("part/header.php");
-
-    ?>
 
 
     <main>

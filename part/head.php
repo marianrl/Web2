@@ -1,5 +1,5 @@
 <?php
-include_once("config/config.php");
+require_once("config/config.php");
 ?>
 <!doctype html>
 <html lang="es">
@@ -17,3 +17,4 @@ include_once("config/config.php");
 
     <title>Pasteleria Teckel's</title>
 </head>
+<body>
