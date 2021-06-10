@@ -1,4 +1,5 @@
-<?php
+<?
+    include_once("config/config.php");
     require_once(DIRE_BASE."part/head.php");
     require_once(DIRE_BASE."part/header.php");
 
