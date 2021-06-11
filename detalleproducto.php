@@ -1,8 +1,9 @@
 <?php
 include_once("config/config.php");
-require_once(DIRE_BASE."part/head.php");
-require_once(DIRE_BASE."part/header.php");
-include_once(DIRE_BASE."dao/dao_comentarios.php");
+require_once(DIR_BASE."part/head.php");
+require_once(DIR_BASE."part/header.php");
+include_once(DIR_BASE."dao/dao_comentarios.php");
+include_once(DIR_BASE."dao/dao_producto.php");
 if (isset($_POST['subitCom'])) {
 guardarComentario($_POST);
 }
@@ -11,16 +12,13 @@ guardarComentario($_POST);
     <section class="conteiner">
         <h1 class="conteiner fluid">Tienda</h1>
         <?php
-        require_once(DIRE_BASE."part/sub_menu.php");
+        require_once(DIR_BASE."part/sub_menu.php");
         ?>
         <div class="container-fluid galeriadivcards">
             <div class="row">
 
                 <?php
-                $arrayProductos = json_decode(file_get_contents(DIRE_BASE.'array/producto.json'), TRUE);
-                /*var_dump($arrayProductos);die(); */
-                $producto = $arrayProductos[$_GET['producto']];
-
+                $producto = obtenerProducto($_GET['producto']);
                 ?>
                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <article class="card">
@@ -36,7 +34,7 @@ guardarComentario($_POST);
         <div class="col-lg-12 col-md-12 col-sm-12 col-12 conteiner for">
           <!--/.Muestra comentario-->
             <?php 
-            $arrayComentarios = json_decode(file_get_contents(DIRE_BASE.'array/comentarios.json'), TRUE);
+            $arrayComentarios = json_decode(file_get_contents(DIR_BASE.'array/comentarios.json'), TRUE);
             foreach ($arrayComentarios as $comentarios) {
                 $print = true;
                         if (!empty($_GET['producto']) and $print) {
@@ -70,13 +68,13 @@ guardarComentario($_POST);
                     <div class="form-group container-fluid">
                         <label for="inputEmail3" class="col-sm-2 col-form-label" id="inputEmail4">
                             Nombre y Apellido</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="nombre" placeholder="Ingrese su nombre y apellido" class="form-control">
+                        <div class="col-sm-4">
+                            <input type="text" name="nombre" placeholder="Ingrese su Nombre y Apellido" class="form-control">
                         </div>
                         <label for="inputEmail3" class="col-sm-12 col-form-label">
                             Comentario:</label>
                         <div class="col-sm-10">
-                            <textarea name="comentario" cols="27" rows="5"></textarea>
+                            <textarea name="comentario" cols="50" rows="5"></textarea>
                         </div>
                         <!-- botones de enviar y cancelar -->
                         <input type="submit" name="subitCom" value="Enviar">
@@ -90,10 +88,7 @@ guardarComentario($_POST);
 </main>
 
 <?php
-require_once(DIRE_BASE.'part/footer.php');
-?>
-
-<?php
-require_once(DIRE_BASE.'part/java.php');
+require_once(DIR_BASE.'part/footer.php');
+require_once(DIR_BASE.'part/java.php');
 ?>
 </body>

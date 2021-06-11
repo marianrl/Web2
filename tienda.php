@@ -36,7 +36,8 @@ require_once("part/header.php");
                             </ul>
                     <?php
                         }
-                    }     ?>
+                    }     
+                    ?>
                 </div>
             </div>
         </section>

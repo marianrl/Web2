@@ -1,7 +1,7 @@
 <?php
 include_once("config/config.php");
-require_once(DIRE_BASE."part/head.php");
-require_once(DIRE_BASE."part/header.php");
+require_once(DIR_BASE."part/head.php");
+require_once(DIR_BASE."part/header.php");
 ?>
 
     <main>
@@ -73,7 +73,7 @@ require_once(DIRE_BASE."part/header.php");
         </section>
     </main>
     <?php
-        require_once(DIRE_BASE.'part/footer.php');
+        require_once(DIR_BASE.'part/footer.php');
         require_once(DIRE_BASE.'part/java.php');
     ?>
 </body>
