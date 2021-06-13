@@ -74,7 +74,7 @@ require_once(DIR_BASE."part/header.php");
     </main>
     <?php
         require_once(DIR_BASE.'part/footer.php');
-        require_once(DIRE_BASE.'part/java.php');
+        require_once(DIR_BASE.'part/java.php');
     ?>
 </body>
 

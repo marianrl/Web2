@@ -39,32 +39,33 @@ include_once('navbar.php');
               <th style="width: 30%">
                 Foto del producto
               </th>
-              <th style="width: 20%">
-              </th>
-              <th style="width: 20%">
-            <a class="btn btn-info btn-sm" href="#">
-                  <i class="fas fa-pencil-alt">
-                  </i>
-                  Add
-                </a>
-                </th>
-            </tr>
+
+              </tr>
           </thead>
+         <?php
+          $arrayProductos = json_decode(file_get_contents('../../array/producto.json'), TRUE);
+                    foreach ($arrayProductos as $producto) {
+                        $print = true;
+                        if (!empty($_GET['categoria']) and $print) {
+                            if ($producto['categoria'] != $_GET['categoria']) $print = FALSE;
+                        }
+                        if ($print) {
+                          ?>
           <tbody>
             <tr>
               <td>
-                #
+              <?php echo $producto['id'] ?>
               </td>
               <td>
                 <a>
-                  AdminLTE v3
+                <?php echo $producto['nombre'] ?>
                 </a>
                 <br />
               </td>
               <td>
                 <ul class="list-inline">
                   <li class="list-inline-item">
-                    <img alt="Avatar" class="table-avatar" src="../dist/img/avatar.png">
+                    <img alt="Avatar" class="table-avatar" src="../../imagenes/<?php echo $producto['imagen'] ?>">
                   </li>
                 </ul>
               </td>
@@ -76,24 +77,18 @@ include_once('navbar.php');
                 </ul>
               </td>
               <td class="project-actions text-right">
-                <a class="btn btn-primary btn-sm" href="#">
-                  <i class="fas fa-folder">
-                  </i>
-                  View
-                </a>
                 <a class="btn btn-info btn-sm" href="#">
                   <i class="fas fa-pencil-alt">
                   </i>
                   Edit
                 </a>
-                <a class="btn btn-danger btn-sm" href="#">
-                  <i class="fas fa-trash">
-                  </i>
-                  Delete
-                </a>
               </td>
             </tr>
           </tbody>
+          <?php
+                        }
+                      }
+                        ?>
         </table>
       </div>
       <!-- /.card-body -->
