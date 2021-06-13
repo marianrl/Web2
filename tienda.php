@@ -13,7 +13,6 @@ require_once("part/header.php");
                 <div class="row">
                     <?php
                     $arrayProductos = json_decode(file_get_contents('array/producto.json'), TRUE);
-                    /*var_dump($arrayProductos);die(); */
                     foreach ($arrayProductos as $producto) {
                         $print = true;
                         if (!empty($_GET['categoria']) and $print) {
