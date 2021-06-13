@@ -1,5 +1,6 @@
 <?php
 include_once('navbar.php');
+
 ?>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->

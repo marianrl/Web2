@@ -274,6 +274,7 @@ div .btn-group {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  box-sizing: border-box;
 }
 
 .btn-group > .btn {
@@ -281,7 +282,7 @@ div .btn-group {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  background-color: #17a2b8;
+  background-color: #ff7043;
 }
 
 .btn-group > .btn:hover {
@@ -398,15 +399,15 @@ div .btn-group {
 
 .btn-info {
   color: #fff;
-  background-color: #17a2b8;
-  border-color: #17a2b8;
+  background-color: #ff7043;
+  border-color: #ff7043;
   box-shadow: none;
 }
 
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #ffffff;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
