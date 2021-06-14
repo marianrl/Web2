@@ -26,7 +26,7 @@ include_once('navbar.php');
               <div class="icon">
                 <i class="fas fa-user-plus"></i>
               </div>
-              <a href="#" class="small-box-footer">
+              <a href="agregar.php" class="small-box-footer">
                 Agregar <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>
@@ -59,7 +59,7 @@ include_once('navbar.php');
               <div class="icon">
                 <i class="fas fa-chart-pie"></i>
               </div>
-              <a href="#" class="small-box-footer">
+              <a href="eliminar.php" class="small-box-footer">
                 Eliminar <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>

@@ -77,7 +77,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="agregar.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Agregar</p>
                 </a>
@@ -89,7 +89,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="eliminar.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Eliminar</p>
                 </a>
