@@ -14,22 +14,48 @@ guardarComentario($_POST);
         <?php
         require_once(DIR_BASE."part/sub_menu.php");
         ?>
-        <div class="container-fluid galeriadivcards">
-            <div class="row">
+        <div>
+            <div class="container-fluid galeriadivcards">
+                <div class="row">
 
-                <?php
-                $producto = obtenerProducto($_GET['producto']);
-                ?>
-                <div class="col-lg-3 col-md-3 col-sm-12">
-                    <article class="card">
-                        <h2><strong><?php echo $producto['nombre'] ?></strong></h2>
-                        <img src="imagenes/<?php echo $producto['imagen'] ?>" alt="" class="img-fluid">
-                        <p class="pi"><?php echo $producto['descripcion'] ?>
-                        </p>
-                    </article>
+                    <?php
+                    $producto = obtenerProducto($_GET['producto']);
+                    ?>
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <article class="card">
+                            <h2><strong><?php echo $producto['nombre'] ?></strong></h2>
+                            <img src="imagenes/<?php echo $producto['imagen'] ?>" alt="" class="img-fluid">
+                            <p class="pi"><?php echo $producto['descripcion'] ?>
+                            </p>
+                        </article>
+                    </div>
                 </div>
             </div>
+
+            <!-- /.FORMULARIO -->
+            <form action="#" method="post">
+                <fieldset>
+                    <div class="form-group container-fluid">
+                        <h3>Comentarios</h3>
+                        <label for="inputEmail3" class="col-sm-2 col-form-label" id="inputEmail4">
+                                Nombre y Apellido</label>
+                        <div class="col-sm-4">
+                                <input type="text" name="nombre" placeholder="Ingrese su Nombre y Apellido" class="form-control">
+                        </div>
+                        <label for="inputEmail3" class="col-sm-12 col-form-label">
+                                Comentario:</label>
+                        <div class="col-sm-10">
+                                <textarea name="comentario" cols="50" rows="5"></textarea>
+                        </div>
+                        <!-- botones de enviar y cancelar -->
+                        <input type="submit" name="subitCom" value="Enviar">
+                        <input type="reset" value="Borrar">
+                        <input type="hidden" name="producto" value=<?php echo $producto['id'] ?> >
+                    </div>
+                </fieldset>
+            </form>
         </div>
+        
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-12 conteiner for">
           <!--/.Muestra comentario-->
@@ -60,29 +86,6 @@ guardarComentario($_POST);
             <?php
                         }
                     }     ?>
-            
-            <!-- /.FORMULARIO -->
-            <form action="#" method="post">
-                <fieldset class="formulario">
-                    <legend>Comentarios</legend>
-                    <div class="form-group container-fluid">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label" id="inputEmail4">
-                            Nombre y Apellido</label>
-                        <div class="col-sm-4">
-                            <input type="text" name="nombre" placeholder="Ingrese su Nombre y Apellido" class="form-control">
-                        </div>
-                        <label for="inputEmail3" class="col-sm-12 col-form-label">
-                            Comentario:</label>
-                        <div class="col-sm-10">
-                            <textarea name="comentario" cols="50" rows="5"></textarea>
-                        </div>
-                        <!-- botones de enviar y cancelar -->
-                        <input type="submit" name="subitCom" value="Enviar">
-                        <input type="reset" value="Borrar">
-                        <input type="hidden" name="producto" value=<?php echo $producto['id'] ?> >
-                    </div>
-                </fieldset>
-            </form>
         </div>
     </section>
 </main>
