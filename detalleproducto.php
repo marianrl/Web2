@@ -60,26 +60,24 @@ guardarComentario($_POST);
         <div class="col-lg-12 col-md-12 col-sm-12 col-12 conteiner for">
           <!--/.Muestra comentario-->
             <?php 
-            $arrayComentarios = json_decode(file_get_contents(DIR_BASE.'array/comentarios.json'), TRUE);
-            foreach ($arrayComentarios as $comentarios) {
-                $print = true;
-                        if (!empty($_GET['producto']) and $print) {
-                            if ($comentarios['producto'] != $_GET['producto']) $print = FALSE;
-                        }
-                        if ($print) {
+            $comentario = obtenerComentarios();
+            krsort($comentario);
+            
+            foreach ($comentario as $c) {
+                if($producto['id'] == $c['producto']){
                         ?>
             <div class="col-md-6">
                 <!-- Box Comment -->
                 <div class="card card-widget">
                     <div class="card-header">
                         <div class="user-block">
-                            <span class="username"><a><?php echo $comentarios['nombre'] ?></a></span>
-                            <span class="username"><a><?php echo $comentarios['fecha'] ?></a></span>
+                            <span class="username"><a><?php echo $c['nombre'] ?></a></span>
+                            <span class="username"><a><?php echo $c['fecha'] ?></a></span>
                         </div>
                     </div>
                     <div class="card-body">
                         <!-- post text -->
-                        <p><?php echo $comentarios['comentario'] ?></p>
+                        <p><?php echo $c['comentario'] ?></p>
                     </div>
                 </div>
             </div>

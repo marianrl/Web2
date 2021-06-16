@@ -1,3 +1,8 @@
+<?php
+include_once("../../config/config.php");
+include_once(DIR_BASE."dao/dao_comentarios.php");
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +76,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                Administrar
+                Productos
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -90,6 +95,29 @@
               </li>
               <li class="nav-item">
                 <a href="eliminar.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Eliminar</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Comentarios
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="editarComent.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Editar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Eliminar</p>
                 </a>
