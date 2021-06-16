@@ -7,7 +7,7 @@ function guardarComentario($datos = array()){
         'nombre' => $datos['nombre'],
         'comentario' => $datos['comentario'],
         'producto' => $datos['producto'],
-        'fecha' => date('H:i:s d-m-Y')
+        'fecha' => date('d-m-Y H:i:s')
     ); 
     $fp = fopen('array/comentarios.json','w');
     fwrite($fp, json_encode($comentarios));

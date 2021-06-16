@@ -1,6 +1,7 @@
 <?php
 include_once("../../config/config.php");
 include_once(DIR_BASE."dao/dao_comentarios.php");
+include_once(DIR_BASE."dao/dao_producto.php");
 ?>
 
 
@@ -117,7 +118,7 @@ include_once(DIR_BASE."dao/dao_comentarios.php");
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="eliminarComent.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Eliminar</p>
                 </a>

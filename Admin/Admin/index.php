@@ -113,7 +113,7 @@ include_once('navbar.php');
                 <div class="icon">
                   <i class="fas fa-chart-pie"></i>
                 </div>
-                <a href="eliminar.php" class="small-box-footer">
+                <a href="eliminarComent.php" class="small-box-footer">
                   Eliminar <i class="fas fa-arrow-circle-right"></i>
                 </a>
               </div>
