@@ -27,8 +27,8 @@ include_once('navbar.php');
                 <table class="table table-striped projects">
                     <thead>
                         <tr>
-                            <th style="width: 2%">
-                                Id
+                            <th style="width: 10%">
+                                Foto
                             </th>
                             <th style="width: 20%">
                                 Fecha
@@ -44,12 +44,13 @@ include_once('navbar.php');
                     <?php
                     $comentario = obtenerComentarios();
                     krsort($comentario);
+                    $producto = obtenerProductos();
                     foreach ($comentario as $c) {
                     ?>
                         <tbody>
                             <tr>
                                 <td>
-                                    <?php echo $c['producto'] ?>
+                                <img alt="Avatar" class="table-avatar" src="../../imagenes/<?php echo $producto[$c['producto']]['imagen'] ?>">
                                 </td>
                                 <td>
                                     <a>

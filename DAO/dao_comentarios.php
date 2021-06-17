@@ -44,9 +44,9 @@ function modificarComentario($datos = array(), $id){
     fclose($fp);
 }
 
-function borrarComentario($id){
+function borrarComentario($nombre){
     $comentarios = obtenerComentarios(); 
-    unset($comentarios[$id]);
+    unset($comentarios[$nombre]);
     $fp = fopen(DIR_BASE.'array/comentarios.json','w');
     fwrite($fp, json_encode($comentarios));
     fclose($fp);

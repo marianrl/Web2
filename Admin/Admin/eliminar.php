@@ -1,5 +1,9 @@
 <?php
 include_once('navbar.php');
+if(isset($_GET['del'])){
+
+  borrarProducto($_GET['del']);
+  }
 ?>
 
 <div class="content-wrapper">
@@ -8,7 +12,7 @@ include_once('navbar.php');
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Editar</h1>
+          <h1>Eliminar Productos</h1>
         </div>
       </div>
     </div>
@@ -76,8 +80,8 @@ include_once('navbar.php');
                   </li>
                 </ul>
               </td>
-              <td class="project-actions text-right">
-                <a class="btn btn-danger btn-sm" href="#">
+              <td class="project-actions text-right"> 
+                <a class="btn btn-danger btn-sm" href="eliminar.php?del=<?php echo $producto['id']?>" >
                   <i class="fas fa-pencil-alt">
                   </i>
                   Delete
