@@ -25,6 +25,7 @@ guardarComentario($_POST);
                         <article class="card">
                             <h2><strong><?php echo $producto['nombre'] ?></strong></h2>
                             <img src="imagenes/<?php echo $producto['imagen'] ?>" alt="" class="img-fluid">
+                            <h2><strong><?php echo $producto['precio'] ?></strong></h2>
                             <p class="pi"><?php echo $producto['descripcion'] ?>
                             </p>
                         </article>
@@ -42,11 +43,17 @@ guardarComentario($_POST);
                         <div class="col-sm-4">
                                 <input type="text" name="nombre" placeholder="Ingrese su Nombre y Apellido" class="form-control">
                         </div>
+                        <label for="inputEmail3" class="col-sm-2 col-form-label" id="inputEmail4">Email</label>
+                        <div class="col-sm-4">
+                            <input type="email" name="email" class="form-control" placeholder="email">
+                        </div>
                         <label for="inputEmail3" class="col-sm-12 col-form-label">
                                 Comentario:</label>
                         <div class="col-sm-10">
                                 <textarea name="comentario" cols="50" rows="5"></textarea>
                         </div>
+                        
+
                         <!-- botones de enviar y cancelar -->
                         <input type="submit" name="subitCom" value="Enviar">
                         <input type="reset" value="Borrar">

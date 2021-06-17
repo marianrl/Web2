@@ -36,6 +36,9 @@ include_once('navbar.php');
                             <th style="width: 20%">
                                 Nombre
                             </th>
+                            <th style="width: 20%">
+                                Email
+                            </th>
                             <th style="width: 30%">
                                 Comentario
                             </th>
@@ -61,6 +64,12 @@ include_once('navbar.php');
                                 <td>
                                     <a>
                                         <?php echo $c['nombre'] ?>
+                                    </a>
+                                    <br />
+                                </td>
+                                <td>
+                                    <a>
+                                        <?php echo $c['email'] ?>
                                     </a>
                                     <br />
                                 </td>
