@@ -3,19 +3,11 @@
 $subCategoria = array(
         '1' => array(
                 'id' => 1,
-                'subCategoria' => "Sin Tacc"
+                'subcategoria' => "Sin Tacc"
         ),
         '2' => array(
                 'id' => 2,
-                'subCategoria' => "Vegano"
-        ),
-        '3' => array(
-                'id' => 3,
-                'subCategoria' => "Sin Lactosa"
-        ),
-        '4' => array(
-                'id' => 3,
-                'subCategoria' => "Con leche de Soja"
+                'subcategoria' => "Vegano"
         )
         );
 echo json_encode($subCategoria);

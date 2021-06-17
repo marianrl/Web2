@@ -13,12 +13,15 @@ require_once("part/header.php");
                 <div class="row">
                     <?php
                     $arrayProductos = json_decode(file_get_contents('array/producto.json'), TRUE);
-                    foreach ($arrayProductos as $producto) {
+                    foreach($arrayProductos as $producto){ 
                         $print = true;
-                        if (!empty($_GET['categoria']) and $print) {
-                            if ($producto['categoria'] != $_GET['categoria']) $print = FALSE;
+                        if(!empty($_GET['categoria']) AND $print){
+                            if($producto['categoria'] != $_GET['categoria']) $print = FALSE;
                         }
-                        if ($print) {
+                        if(!empty($_GET['subcategoria']) AND $print){
+                            if($producto['subcategoria'] != $_GET['subcategoria']) $print = FALSE;
+                        }
+                         if($print){
                     ?>
                             <ul class="thumbnails">
                                 <li>

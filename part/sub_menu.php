@@ -1,21 +1,20 @@
 <div class="btn-container">
-	<a href="tienda.php?categoria=" class="btn btn-info">Todos</a>
+	<a href="tienda.php?categoria=&subcategoria=" class="btn btn-info">Limpiar Filtros</a>
 	<?php
 	$arrayCategoria = json_decode(file_get_contents('array/categoria.json'), TRUE);
 	foreach ($arrayCategoria as $categoria) {
 	?>
-		<a class="btn btn-info" href="tienda.php?categoria=<?php echo $categoria['id'] ?>"> <?php echo $categoria['categoria'] ?> </a>
+		<a class="btn btn-info" href="tienda.php?categoria=<?php echo $categoria['id'] ?>&subcategoria=<?php echo (	isset($_GET['subcategoria']))?$_GET['subcategoria']:"";?>"> <?php echo $categoria['categoria'] ?> </a>
 	<?php
 	}
 	?>
 </div>
 <div class="btn-container">
-	<a href="tienda.php?categoria=" class="btn btn-info">Todos</a>
-	<?php
-	$arraySubCategoria = json_decode(file_get_contents('array/subCategoria.json'), TRUE);
-	foreach ($arraySubCategoria as $subCategoria) {
+		<?php
+	$arraysubcategoria = json_decode(file_get_contents('array/subCategoria.json'), TRUE);
+	foreach ($arraysubcategoria as $subcategoria) {
 	?>
-		<a class="btn btn-info" href="tienda.php?categoria=<?php echo $subCategoria['id'] ?>"> <?php echo $subCategoria['subCategoria'] ?> </a>
+		<a class="btn btn-info" href="tienda.php?subcategoria=<?php echo $subcategoria['id'] ?>&categoria=<?php echo (	isset($_GET['categoria']))?$_GET['categoria']:"";?>"> <?php echo $subcategoria['subcategoria'] ?> </a>
 	<?php
 	}
 	?>
