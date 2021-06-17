@@ -1,6 +1,7 @@
 
 <?php
-require_once('helpers/string.php')
+require_once('helpers/string.php');
+include_once("config/config.php");
 ?>
 <header id="_top">
 
@@ -33,7 +34,10 @@ require_once('helpers/string.php')
                     <a class="nav-link" href="faqs.php"><img class="icono"
                             src="imagenes/ayudar.png" alt="Preguntas frecuentes">Faq's</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="Admin/Admin/login.php"><img class="icono"
+                            src="imagenes/pngegg.png" alt="Preguntas frecuentes">Login</a>
+                </li>
             </ul>
 
         </div>
