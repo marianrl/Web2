@@ -68,8 +68,38 @@ $productos = array(
             'imagen' => 'mix2.jpg',
             'descripcion' => "Variedad de mini tortas y galletitas",
             'categoria' => 3
+        ),
+
+        '9'=> array(
+            'id' => 9,
+            'nombre' => "Medialunas",
+            'disponibilidad' => TRUE,
+            'imagen' => 'medialunas.jpg',
+            'descripcion' => "Medialunas Veganas hechas con Margarina",
+            'categoria' => 4
+        
+        ),
+
+        '10'=> array(
+            'id' => 10,
+            'nombre' => "Cookies de chocolate sin TACC",
+            'disponibilidad' => TRUE,
+            'imagen' => 'cookiestacc.jpg',
+            'descripcion' => "Cookies marmoladas sin TACC",
+            'categoria' => 2 
+            
+        ),
+        '11'=> array(
+            'id' => 11,
+            'nombre' => "Brownie Vegano",
+            'disponibilidad' => TRUE,
+            'imagen' => 'vegana.jpg',
+            'descripcion' => "Brownie vegano con Crema y Dulce de leche",
+            'categoria' => 1
+
         )
+
         );
 
-        echo json_encode($productos);
+            echo json_encode($productos);
 ?>
