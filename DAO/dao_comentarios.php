@@ -4,6 +4,7 @@ function guardarComentario($datos = array()){
     $comentarios = obtenerComentarios(); 
     /*var_dump($comentarios);die();*/
     $comentarios[date('Ymdhisu')] = array(
+        'id' => date('Ymdhisu'),
         'nombre' => $datos['nombre'],
         'comentario' => $datos['comentario'],
         'producto' => $datos['producto'],

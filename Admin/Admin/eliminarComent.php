@@ -1,11 +1,10 @@
 <?php
 include_once('navbar.php');
 
-if(isset($_GET['del'])){
+if (isset($_GET['del'])) {
 
-borrarComent($_GET['del']);
-
-  }
+    borrarComentario($_GET['del']);
+}
 ?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -22,7 +21,9 @@ borrarComent($_GET['del']);
     <section class="content">
         <!-- Default box -->
         <div class="card">
+
             <div class="card-header">
+
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                         <i class="fas fa-minus"></i>
@@ -30,7 +31,25 @@ borrarComent($_GET['del']);
                 </div>
             </div>
             <div class="card-body p-0">
+            <div class="card-body pad table-responsive">
+            <table class="table table-bordered text-center">
+            <td>
+                    <a href="eliminarComent.php?id=" type="button" class="btn btn-block btn-danger btn-xs" > Borrar filtros </a>
+            </td>
+            <?php
+                $producto = obtenerProductos();
+	            foreach ($producto as $producto) {     
+	        ?>
+                <td>
+                    <a href="eliminarComent.php?id=<?php echo $producto['id'] ?>" type="button" class="btn btn-block btn-primary btn-xs" > <?php echo cortar_palabras($producto['nombre'], 8) ?></a>
+            <?php
+                }
+            ?>
+                </td>
+            </table>
+            </div>
                 <table class="table table-striped projects">
+
                     <thead>
                         <tr>
                             <th style="width: 10%">
@@ -42,6 +61,9 @@ borrarComent($_GET['del']);
                             <th style="width: 20%">
                                 Nombre
                             </th>
+                            <th style="width: 20%">
+                                Email
+                            </th>
                             <th style="width: 30%">
                                 Comentario
                             </th>
@@ -51,13 +73,17 @@ borrarComent($_GET['del']);
                     $comentario = obtenerComentarios();
                     krsort($comentario);
                     $producto = obtenerProductos();
-                    
                     foreach ($comentario as $c) {
+                        $print = true;
+                        if(!empty($_GET['id']) AND $print){
+                        if($c['producto'] != $_GET['id']) $print = FALSE;
+                        }
+                        if($print){
                     ?>
                         <tbody>
                             <tr>
                                 <td>
-                                <img alt="Avatar" class="table-avatar" src="../../imagenes/<?php echo $producto[$c['producto']]['imagen'] ?>">
+                                    <img alt="Avatar" class="table-avatar" src="../../imagenes/<?php echo $producto[$c['producto']]['imagen'] ?>">
                                 </td>
                                 <td>
                                     <a>
@@ -73,12 +99,18 @@ borrarComent($_GET['del']);
                                 </td>
                                 <td>
                                     <a>
+                                        <?php echo $c['email'] ?>
+                                    </a>
+                                    <br />
+                                </td>
+                                <td>
+                                    <a>
                                         <?php echo $c['comentario'] ?>
                                     </a>
                                     <br />
                                 </td>
                                 <td class="project-actions text-right">
-                                    <a class="btn btn-danger btn-sm" href="eliminarComent.php?del=<?php echo $c['nombre']?>">
+                                    <a class="btn btn-danger btn-sm" href="eliminarComent.php?del=<?php echo $c['id'] ?>">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Delete
@@ -88,6 +120,8 @@ borrarComent($_GET['del']);
                         </tbody>
                     <?php
                     }
+                }
+                
                     ?>
                 </table>
             </div>
@@ -100,4 +134,3 @@ borrarComent($_GET['del']);
 <!-- /.content-wrapper -->
 <?php
 include_once('footer.php');
-?>

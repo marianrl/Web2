@@ -2,6 +2,7 @@
 include_once("../../config/config.php");
 include_once(DIR_BASE."dao/dao_comentarios.php");
 include_once(DIR_BASE."dao/dao_producto.php");
+include_once(DIR_BASE."helpers/string.php");
 ?>
 
 
