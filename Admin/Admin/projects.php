@@ -77,7 +77,7 @@ include_once('navbar.php');
                 </ul>
               </td>
               <td class="project-actions text-right">
-                <a class="btn btn-info btn-sm" href="#">
+                <a class="btn btn-info btn-sm" href="agregar.php?edit=<?php echo $producto['id']?>">
                   <i class="fas fa-pencil-alt">
                   </i>
                   Edit
