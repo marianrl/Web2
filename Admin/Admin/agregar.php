@@ -1,20 +1,15 @@
 <?php
 include_once('navbar.php');
-if(isset($_POST['subitProd'])){
-  if(!empty($_GET['edit'])){
-    modificarProducto($_POST,$_GET['edit']);
-  }else{
+if (isset($_POST['subitProd'])) {
+  if (!empty($_GET['edit'])) {
+    modificarProducto($_POST, $_GET['edit']);
+  } else {
     guardarProducto($_POST);
   }
-    redirect('agregar.php');
+  redirect('agregar.php');
 }
 
-
-
-
-
-
-$producto = array('nombre' => '', 'precio' => '', 'categoria' => '', 'marca' => '', 'disponibilidad' => '', 'descripcion' => '', 'imagen' => '');
+$producto = array('nombre' => '', 'precio' => '', 'categoria' => '', 'subcategoria' => '', 'disponibilidad' => '', 'descripcion' => '', 'imagen' => '');
 if (!empty($_GET['edit'])) {
   $producto = obtenerProducto($_GET['edit']);
 }
@@ -30,10 +25,8 @@ if (!empty($_GET['edit'])) {
       </div>
     </div><!-- /.container-fluid -->
   </section>
-
   <!-- Main content -->
   <section class="content">
-
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
@@ -87,7 +80,7 @@ if (!empty($_GET['edit'])) {
                 <input type="text" name='precio' class="form-control" id="exampleInputPassword1" placeholder="$" value="<?php echo $producto['precio'] ?>">
               </div>
               <div class="custom-control custom-radio">
-                <input type="checkbox" class="form-check-label" id="exampleInputEmail1" value="true" name="activa" <?php echo ($producto['disponibilidad']==TRUE)?'checked':'' ?>>
+                <input type="checkbox" class="form-check-label" id="exampleInputEmail1" value="true" name="activa" <?php echo ($producto['disponibilidad'] == TRUE) ? 'checked' : '' ?>>
                 <label class="form-check-label" name='activa'>Disponible</label>
               </div>
               <div class="form-group">
@@ -102,10 +95,8 @@ if (!empty($_GET['edit'])) {
                   </div>
                 </div>
               </div>
-
             </div>
             <!-- /.card-body -->
-
             <div class="card-footer">
               <button type="submit" name="subitProd" class="btn btn-primary">Cargar</button>
             </div>
@@ -113,10 +104,8 @@ if (!empty($_GET['edit'])) {
         </div>
       </div>
       <!-- /.card-body -->
-
     </div>
     <!-- /.card -->
-
   </section>
   <!-- /.content -->
 </div>
