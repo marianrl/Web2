@@ -33,11 +33,11 @@ include_once('navbar.php');
                     <a href="projects.php?id=" type="button" class="btn btn-block btn-danger btn-xs" > Borrar filtros </a>
             </td>
             <?php
-                $producto = obtenerProductos();
-	            foreach ($producto as $producto) {     
+                $subcat = obtenerSubsubcategoria();
+	            foreach ($subcat as $sc) {     
 	        ?>
                 <td>
-                    <a href="projects.php?id=<?php echo $producto['id'] ?>" type="button" class="btn btn-block btn-primary btn-xs" > <?php echo cortar_palabras($producto['nombre'], 8) ?></a>
+                    <a href="projects.php?id=<?php echo $sc['id'] ?>" type="button" class="btn btn-block btn-primary btn-xs" > <?php echo cortar_palabras($sc['subcategoria'], 8) ?></a>
             <?php
                 }
             ?>
@@ -60,11 +60,11 @@ include_once('navbar.php');
               </tr>
           </thead>
          <?php
-          $arrayProductos = json_decode(file_get_contents('../../array/producto.json'), TRUE);
+          $arrayProductos = obtenerProductos();
                     foreach ($arrayProductos as $producto) {
                         $print = true;
-                        if (!empty($_GET['categoria']) and $print) {
-                            if ($producto['categoria'] != $_GET['categoria']) $print = FALSE;
+                        if (!empty($_GET['id']) and $print) {
+                            if ($producto['subcategoria'] != $_GET['id']) $print = FALSE;
                         }
                         if ($print) {
                           ?>

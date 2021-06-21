@@ -34,7 +34,8 @@ include_once('navbar.php');
 	            foreach ($producto as $producto) {     
 	        ?>
                 <td>
-                    <a href="editarComent.php?id=<?php echo $producto['id'] ?>" type="button" class="btn btn-block btn-primary btn-xs" > <?php echo cortar_palabras($producto['nombre'], 8) ?></a>
+                    <a href="editarComent.php?id=<?php echo $producto['id'] ?>" type="button" class="btn btn-block btn-primary btn-xs" > 
+                    <?php echo cortar_palabras($producto['nombre'], 8) ?></a>
             <?php
                 }
             ?>
