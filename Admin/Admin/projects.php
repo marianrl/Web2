@@ -27,6 +27,23 @@ include_once('navbar.php');
         </div>
       </div>
       <div class="card-body p-0">
+      <div class="card-body pad table-responsive">
+            <table class="table table-bordered text-center">
+            <td>
+                    <a href="projects.php?id=" type="button" class="btn btn-block btn-danger btn-xs" > Borrar filtros </a>
+            </td>
+            <?php
+                $producto = obtenerProductos();
+	            foreach ($producto as $producto) {     
+	        ?>
+                <td>
+                    <a href="projects.php?id=<?php echo $producto['id'] ?>" type="button" class="btn btn-block btn-primary btn-xs" > <?php echo cortar_palabras($producto['nombre'], 8) ?></a>
+            <?php
+                }
+            ?>
+                </td>
+            </table>
+            </div>
         <table class="table table-striped projects">
           <thead>
             <tr>
