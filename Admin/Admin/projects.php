@@ -99,7 +99,7 @@ include_once('navbar.php');
               <td>
                 <ul class="list-inline">
                   <li class="list-inline-item">
-                    <img alt="Avatar" class="table-avatar" src="../../imagenes/<?php echo $producto['imagen'] ?>">
+                    <img alt="Avatar" class="table-avatar" src="../../<?php echo $producto['imagen'] ?>">
                   </li>
                 </ul>
               </td>

@@ -26,7 +26,7 @@ require_once("part/header.php");
                             <ul class="thumbnails">
                                 <li>
                                     <div class="thumbnail">
-                                        <a href="detalleproducto.php?producto=<?php echo $producto['id'] ?>"><img src="imagenes/<?php echo $producto['imagen'] ?>" alt="" class="img-fluid"></a>
+                                        <a href="detalleproducto.php?producto=<?php echo $producto['id'] ?>"><img src="<?php echo $producto['imagen'] ?>" alt="" class="img-fluid"></a>
                                         <div class="caption cntr">
                                             <p><strong><?php echo $producto['nombre'] ?></strong></p>
                                             <p class="pi"><?php echo cortar_palabras($producto['descripcion'], 50) ?></p>

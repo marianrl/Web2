@@ -83,7 +83,7 @@ if (isset($_GET['del'])) {
                         <tbody>
                             <tr>
                                 <td>
-                                    <img alt="Avatar" class="table-avatar" src="../../imagenes/<?php echo $producto[$c['producto']]['imagen'] ?>">
+                                    <img alt="Avatar" class="table-avatar" src="../../<?php echo $producto[$c['producto']]['imagen'] ?>">
                                 </td>
                                 <td>
                                     <a>
