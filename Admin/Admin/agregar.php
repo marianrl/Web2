@@ -2,9 +2,9 @@
 include_once('navbar.php');
 if (isset($_POST['subitProd'])) {
   if (!empty($_GET['edit'])) {
-    modificarProducto($_POST, $_GET['edit']);
+    businessModificarProducto($_POST, $_GET['edit']);
   } else {
-    guardarProducto($_POST);
+    businessGuardarProducto($_POST);
   }
   redirect('agregar.php');
 }
@@ -43,7 +43,7 @@ if (!empty($_GET['edit'])) {
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form action="#" method="post">
+          <form action="#" method="post" enctype="multipart/form-data">
             <div class="card-body">
               <div class="form-group">
                 <label for="exampleInputEmail1">Nombre</label>
@@ -87,11 +87,9 @@ if (!empty($_GET['edit'])) {
                 <label for="exampleInputFile">Imagen</label>
                 <div class="input-group">
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="exampleInputFile">
+                  <input type="file" name="imagen" class="custom-file-input" id="exampleInputFile">
+                    <input type="hidden" name="old_imagen" value="<?php echo $producto['imagen'] ?>" class="custom-file-input" id="exampleInputFile">
                     <label class="custom-file-label" for="exampleInputFile">Agregar imagen</label>
-                  </div>
-                  <div class="input-group-append">
-                    <span class="input-group-text">Borrar</span>
                   </div>
                 </div>
               </div>

@@ -6,6 +6,7 @@ include_once(DIR_BASE."dao/dao_categoria.php");
 include_once(DIR_BASE."dao/dao_subcategoria.php");
 include_once(DIR_BASE."helpers/string.php");
 include_once(DIR_BASE."helpers/urls.php");
+include_once(DIR_BASE."Business/productoBusiness.php");
 ?>
 
 

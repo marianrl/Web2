@@ -1,13 +1,13 @@
 <?php
 
-function guardarProducto($datos = array()){
+function daoGuardarProducto($datos = array()){
     $productos = obtenerProductos(); 
     $id=date('Ymdhisu');
     $productos[$id] = array(
         'id' => $id,
         'nombre' => $datos['nombre'],
         'disponibilidad' => isset($datos['activa'])?'TRUE':'FALSE',
-        'imagen' => '',
+        'imagen' => $datos['imagen'],
         'descripcion' => $datos['descripcion'],
         'categoria' => $datos['categoria'],
         'subcategoria' => $datos['subcategoria'],
@@ -34,14 +34,14 @@ function obtenerProducto($id){
 
 }
 
-function modificarProducto($datos = array(), $id){
+function daoModificarProducto($datos = array(), $id){
     
     $productos = obtenerProductos(); 
     $productos[$id] = array(
         'id' => $id,
         'nombre' => $datos['nombre'],
         'disponibilidad' => isset($datos['activa'])?'TRUE':'FALSE',
-        'imagen' => '',
+        'imagen' => $datos['imagen'],
         'descripcion' => $datos['descripcion'],
         'categoria' => $datos['categoria'],
         'subcategoria' => $datos['subcategoria'],
@@ -49,6 +49,7 @@ function modificarProducto($datos = array(), $id){
     ); 
     file_put_contents(DIR_BASE.'array/producto.json',json_encode($productos));
     return $id;   
+
 }
 
 function borrarProducto($id){
