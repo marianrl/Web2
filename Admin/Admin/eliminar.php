@@ -34,14 +34,14 @@ if(isset($_GET['del'])){
     <div class="card-body pad table-responsive">
       <table class="table table-bordered text-center">
         <td>
-          <a href="projects.php?id=" type="button" class="btn btn-block btn-danger btn-xs"> Borrar filtros </a>
+          <a href="eliminar.php?id=" type="button" class="btn btn-block btn-danger btn-xs"> Borrar filtros </a>
         </td>
         <?php
         $arraycategoria = ObtenerCategorias();
         foreach ($arraycategoria as $cat) {
         ?>
           <td>
-            <a href="projects.php?categoria=<?php echo $cat['id'] ?>&subcategoria=<?php echo (isset($_GET['subcategoria'])) ? $_GET['subcategoria'] : ""; ?>" type="button" class="btn btn-block btn-primary btn-xs"> <?php echo cortar_palabras($cat['categoria'], 8) ?></a>
+            <a href="eliminar.php?categoria=<?php echo $cat['id'] ?>&subcategoria=<?php echo (isset($_GET['subcategoria'])) ? $_GET['subcategoria'] : ""; ?>" type="button" class="btn btn-block btn-primary btn-xs"> <?php echo cortar_palabras($cat['categoria'], 8) ?></a>
           <?php
         }
           ?>
@@ -53,7 +53,7 @@ if(isset($_GET['del'])){
         foreach ($arraysubcategoria as $sc) {
         ?>
           <td>
-            <a href="projects.php?subcategoria=<?php echo $sc['id'] ?>&categoria=<?php echo (isset($_GET['categoria'])) ? $_GET['categoria'] : ""; ?>" type="button" class="btn btn-block btn-primary btn-xs"> <?php echo cortar_palabras($sc['subcategoria'], 8) ?></a>
+            <a href="eliminar.php?subcategoria=<?php echo $sc['id'] ?>&categoria=<?php echo (isset($_GET['categoria'])) ? $_GET['categoria'] : ""; ?>" type="button" class="btn btn-block btn-primary btn-xs"> <?php echo cortar_palabras($sc['subcategoria'], 8) ?></a>
           <?php
         }
           ?>
@@ -114,7 +114,7 @@ if(isset($_GET['del'])){
                 </ul>
               </td>
               <td class="project-actions text-right">
-                <a class="btn btn-info btn-sm" href="agregar.php?edit=<?php echo $producto['id'] ?>">
+              <a class="btn btn-danger btn-sm" href="eliminar.php?del=<?php echo $producto['id']?>" >
                   <i class="fas fa-pencil-alt">
                   </i>
                   Delete
