@@ -72,13 +72,9 @@ include_once(DIR_BASE."Business/productoBusiness.php");
           </div>
         </div>
       </div>
-
-      <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-               <li class="nav-item">
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
@@ -124,6 +120,52 @@ include_once(DIR_BASE."Business/productoBusiness.php");
               </li>
               <li class="nav-item">
                 <a href="eliminarComent.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Eliminar</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Categoria
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="agregarCat.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Agregar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="eliminarCat.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Eliminar</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                SubCategoria
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="agregarSubCat.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Agregar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="eliminarSubCat.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Eliminar</p>
                 </a>

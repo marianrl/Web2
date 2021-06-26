@@ -24,7 +24,7 @@ guardarComentario($_POST);
                     <div class="col-lg-3 col-md-3 col-sm-12">
                         <article class="card">
                             <h2><strong><?php echo $producto['nombre'] ?></strong></h2>
-                            <img src="imagenes/<?php echo $producto['imagen'] ?>" alt="" class="img-fluid">
+                            <img src="<?php echo $producto['imagen'] ?>" alt="" class="img-fluid">
                             <h2><strong><?php echo $producto['precio'] ?></strong></h2>
                             <p class="pi"><?php echo $producto['descripcion'] ?>
                             </p>
