@@ -384,3 +384,21 @@ li {
   border: 0 solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
+
+.contacto-col-left {
+  display: block !important;
+  text-align: end !important;
+}
+
+#contacto {
+  margin-top: 50px;
+  margin-bottom: 260px;
+}
+
+.control-group {
+  margin-bottom: 15px;
+}
+
+.textbox {
+  width: 380px;
+}
