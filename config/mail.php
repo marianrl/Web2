@@ -5,5 +5,4 @@ $mail_smtp_port = '587';
 $mail_smtp_user = 'teckelsbakery@outlook.es';
 $mail_smtp_pass = 'teckelsweb2';
 
-
 ?>
