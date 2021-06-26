@@ -6,7 +6,7 @@ require_once(DIR_BASE."part/header.php");
 require_once(DIR_BASE.'Business/contactBusiness.php');
 
 	if(!empty($_POST['email'])){
-		var_dump($_POST);
+		//var_dump($_POST);
 		sendMail($_POST);
 	}
 

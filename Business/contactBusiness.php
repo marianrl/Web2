@@ -17,7 +17,7 @@ function sendMail($data){
 
     $message = (new Swift_Message('Contacto desde la tienda'))
         ->setFrom([$data['email']=>$data['name']])
-        ->setTo([$GLOBALS['mail_smtp_user']=>'Formulario de contacto de la tienda'])
+        ->setTo(['rojasmatasmariano@gmail.com'=>'Formulario de contacto de la tienda'])
         ->setBody(processMailBody($data))
         ->setContentType("text/html");
 
