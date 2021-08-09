@@ -54,12 +54,9 @@ require_once(DIR_BASE.'Business/contactBusiness.php');
         </div>
     </section>
 </main>
-
-
 <?php
         require_once(DIR_BASE.'part/footer.php');
         require_once(DIR_BASE.'part/java.php');
     ?>
 </body>
-
 </html>

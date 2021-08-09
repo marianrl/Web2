@@ -9,7 +9,8 @@ require_once(DIR_BASE.'config/mail.php');
 
 
 function sendMail($data){
-    $transport = (new Swift_SmtpTransport($GLOBALS['mail_smtp_addr'],$GLOBALS['mail_smtp_port']))
+    
+   $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465,'ssl'))
     ->setUsername($GLOBALS['mail_smtp_user'])
     ->setPAssword($GLOBALS['mail_smtp_pass']);
 
@@ -23,6 +24,7 @@ function sendMail($data){
 
     //var_dump($message);
 return $mailer->send($message);
+
 }
 
 function processMailBody($data){
