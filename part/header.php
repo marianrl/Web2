@@ -35,7 +35,7 @@ include_once("config/config.php");
                             src="imagenes/ayudar.png" alt="Preguntas frecuentes">Faq's</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Admin/Admin/login.php"><img class="icono"
+                    <a class="nav-link" href="Admin/login.php"><img class="icono"
                             src="imagenes/pngegg.png" alt="Preguntas frecuentes">Login</a>
                 </li>
             </ul>

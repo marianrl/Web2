@@ -6,7 +6,7 @@ if (isset($_POST['subitProd'])) {
   } else {
     businessGuardarProducto($_POST);
   }
-  redirect('agregar.php');
+  redirect('projects.php');
 }
 
 $producto = array('nombre' => '', 'precio' => '', 'categoria' => '', 'subcategoria' => '', 'disponibilidad' => '', 'descripcion' => '', 'imagen' => '');
@@ -88,8 +88,8 @@ if (!empty($_GET['edit'])) {
                 <div class="input-group">
                   <div class="custom-file">
                   <input type="file" name="imagen" class="custom-file-input" id="exampleInputFile">
-                    <input type="hidden" name="old_imagen" value="<?php echo $producto['imagen'] ?>" class="custom-file-input" id="exampleInputFile">
-                    <label class="custom-file-label" for="exampleInputFile">Agregar imagen</label>
+                    <input type="hidden" name="old_imagen" value="<?php echo $producto['imagen']?>" class="custom-file-input" id="exampleInputFile">
+                    <label class="custom-file-label" for="exampleInputFile"><?php echo $producto['imagen']?></label>
                   </div>
                 </div>
               </div>

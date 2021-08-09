@@ -1,6 +1,6 @@
 <?php
 
-include_once(DIR_BASE.'DAO/dao_producto.php');
+include_once(DIR_BASE.'dao/dao_producto.php');
 
 function businessModificarProducto($datos = array(), $id){
     if(!empty($_FILES['imagen'])){
@@ -33,9 +33,7 @@ function businessGuardarProducto($datos = array()){
             mkdir(DIR_BASE.'imagenes/'.$id);
         }
         move_uploaded_file($_FILES['imagen']['tmp_name'],DIR_BASE.'imagenes/'.$id.'/'.$_FILES['imagen']['name']);
-        if(file_exists(DIR_BASE.$datos['old_imagen'])){
-            unlink(DIR_BASE.$datos['old_imagen']);
-        }
+        
     } 
 
 

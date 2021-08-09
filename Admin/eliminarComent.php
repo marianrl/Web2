@@ -1,5 +1,10 @@
 <?php
 include_once('navbar.php');
+
+if (isset($_GET['del'])) {
+
+    borrarComentario($_GET['del']);
+}
 ?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -7,7 +12,7 @@ include_once('navbar.php');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Editar</h1>
+                    <h1>Eliminar</h1>
                 </div>
             </div>
         </div>
@@ -16,7 +21,9 @@ include_once('navbar.php');
     <section class="content">
         <!-- Default box -->
         <div class="card">
+
             <div class="card-header">
+
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                         <i class="fas fa-minus"></i>
@@ -27,15 +34,14 @@ include_once('navbar.php');
             <div class="card-body pad table-responsive">
             <table class="table table-bordered text-center">
             <td>
-                    <a href="editarComent.php?id=" type="button" class="btn btn-block btn-danger btn-xs" > Borrar filtros </a>
+                    <a href="eliminarComent.php?id=" type="button" class="btn btn-block btn-danger btn-xs" > Borrar filtros </a>
             </td>
             <?php
                 $producto = obtenerProductos();
 	            foreach ($producto as $producto) {     
 	        ?>
                 <td>
-                    <a href="editarComent.php?id=<?php echo $producto['id'] ?>" type="button" class="btn btn-block btn-primary btn-xs" > 
-                    <?php echo cortar_palabras($producto['nombre'], 8) ?></a>
+                    <a href="eliminarComent.php?id=<?php echo $producto['id'] ?>" type="button" class="btn btn-block btn-primary btn-xs" > <?php echo cortar_palabras($producto['nombre'], 8) ?></a>
             <?php
                 }
             ?>
@@ -43,6 +49,7 @@ include_once('navbar.php');
             </table>
             </div>
                 <table class="table table-striped projects">
+
                     <thead>
                         <tr>
                             <th style="width: 10%">
@@ -69,7 +76,6 @@ include_once('navbar.php');
                     foreach ($comentario as $c) {
                         $print = true;
                         if(!empty($_GET['id']) AND $print){
-
                         if($c['producto'] != $_GET['id']) $print = FALSE;
                         }
                         if($print){
@@ -77,7 +83,7 @@ include_once('navbar.php');
                         <tbody>
                             <tr>
                                 <td>
-                                <img alt="Avatar" class="table-avatar" src="../../<?php echo $producto[$c['producto']]['imagen'] ?>">
+                                    <img alt="Avatar" class="table-avatar" src="../<?php echo $producto[$c['producto']]['imagen'] ?>">
                                 </td>
                                 <td>
                                     <a>
@@ -104,10 +110,10 @@ include_once('navbar.php');
                                     <br />
                                 </td>
                                 <td class="project-actions text-right">
-                                    <a class="btn btn-info btn-sm" href="#">
+                                    <a class="btn btn-danger btn-sm" href="eliminarComent.php?del=<?php echo $c['id'] ?>">
                                         <i class="fas fa-pencil-alt">
                                         </i>
-                                        Edit
+                                        Delete
                                     </a>
                                 </td>
                             </tr>
@@ -115,6 +121,7 @@ include_once('navbar.php');
                     <?php
                     }
                 }
+                
                     ?>
                 </table>
             </div>
@@ -127,4 +134,3 @@ include_once('navbar.php');
 <!-- /.content-wrapper -->
 <?php
 include_once('footer.php');
-?>
